@@ -69,3 +69,4 @@ Metrik evaluasi ini memberikan gambaran sejauh mana model dapat memprediksi harg
 - [Unilever Indonesia Tbk. - Company Background](https://stockbit.com/symbol/UNVR) 
 - [Time-Series Forecasting: Predicting Stock Prices Using An LSTM Model](https://towardsdatascience.com/lstm-time-series-forecasting-predicting-stock-prices-using-an-lstm-model-6223e9644a2f) 
 - [Stock Price Prediction using Machine Learning with Source Code](https://www.projectpro.io/article/stock-price-prediction-using-machine-learning-project/571)
+- [Forecasting statistical details](https://www.ibm.com/docs/en/cognos-analytics/11.1.0?topic=forecasting-statistical-details)
