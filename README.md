@@ -37,7 +37,7 @@ Dataset yang digunakan berasal dari  [Indonesia Stock Dataset](https://www.kaggl
 Data historis harga saham Unilever Indonesia dari IHGS diimpor menggunakan library Pandas dan disajikan dalam bentuk DataFrame. Selanjutnya, dilakukan pemahaman terhadap data tersebut dengan menampilkan grafik harga saham Unilever Indonesia dari waktu ke waktu. Grafik ini membantu dalam melihat tren dan pola pergerakan harga saham perusahaan.
 Berikut grafik visualisasi dataset:
 
-![image](https://github.com/nadyanvl/test/assets/42887151/e8b20b25-2884-4342-b4c8-12cbd2968400)
+![image](https://drive.google.com/file/d/1kv1K41ybwF_D0gJ4fK1WY2x3y6nGHYxU/view?usp=drive_link)
 
 Setelah itu, dilakukan Feature Scaling menggunakan MinMaxScaler untuk menormalkan data harga saham sebelum dimasukkan ke dalam model LSTM. Data juga dibagi menjadi data latih (train) dan data uji (test) dengan perbandingan 80:20 menggunakan fungsi split_data.
 
@@ -47,14 +47,14 @@ Proyek ini menggunakan model LSTM (Long Short-Term Memory) untuk memprediksi har
 Model LSTM yang dikembangkan memiliki beberapa layer, yaitu layer LSTM, Dropout, dan Dense. Ukuran lapisan LSTM, dropout rate, dan jumlah neuron pada hidden layer diubah untuk mencari konfigurasi yang optimal. Hal ini bertujuan untuk meningkatkan performa model dalam memprediksi harga saham dengan lebih akurat.
 Detail Model sebagai berikut:
 
-![image](https://github.com/nadyanvl/test/assets/42887151/be78a116-9aec-4127-b0c1-b8c3f0fcf688)
+![image](https://drive.google.com/file/d/1MTzLBvs095bBbN-rOct1mRqtB49EWmMS/view?usp=drive_link)
 
 Proses pelatihan model dilakukan dengan mengkompilasi model menggunakan optimizer Adam dengan learning rate 0.001 dan loss function Huber. Selama pelatihan, digunakan callbacks EarlyStopping untuk menghentikan pelatihan jika mae pada data validasi sudah cukup kecil.
 
 ## Evaluation
 Evaluasi model dilakukan menggunakan data uji. Prediksi harga saham dilakukan pada data uji dan hasilnya dibandingkan dengan harga saham aktual, serta dilakukan plotting grafik harga saham aktual dan harga saham yang diprediksi.
 
-![image](https://github.com/nadyanvl/test/assets/42887151/2840e2c2-7622-4011-9d40-e91eb562f44e)
+![image](https://drive.google.com/file/d/1U8SPTuDE3vO848mQelsH9tOjO12qWFCy/view?usp=drive_link)
 
 Beberapa metrik evaluasi digunakan untuk mengukur performa model prediksi harga saham seperti Mean Absolute Error (MAE), Root Mean Square Error (RMSE), dan Mean Absolute Percentage Error (MAPE). 
 
