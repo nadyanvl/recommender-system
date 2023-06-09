@@ -2,24 +2,18 @@
 
 ## Domain Proyek
 
-Investasi di pasar saham merupakan salah satu cara yang umum digunakan oleh para investor untuk mengembangkan kekayaan mereka. Salah satu aspek penting dalam investasi saham adalah kemampuan untuk memprediksi pergerakan harga saham di masa depan. Dalam proyek ini, fokus utama adalah prediksi harga saham perusahaan Unilever Indonesia menggunakan metode Long Short-Term Memory (LSTM).
+Prediksi Harga Saham menggunakan Long Short-Term Memory (LSTM) dmenggunakan data dari IHSG perusahaan Unilever Indonesia.
 
-Perusahaan Unilever Indonesia adalah salah satu perusahaan FMCG (Fast-Moving Consumer Goods) terkemuka di Indonesia. Saham perusahaan ini diperdagangkan di Bursa Efek Indonesia (BEI). Sebagai investor, memahami perilaku harga saham Unilever Indonesia dapat memberikan keuntungan yang signifikan. Namun, prediksi harga saham merupakan tantangan yang kompleks karena dipengaruhi oleh banyak faktor eksternal dan internal, seperti kondisi pasar global, berita perusahaan, kinerja keuangan, dan faktor psikologis.
-
-Proyek ini bertujuan untuk mengembangkan model prediksi menggunakan metode LSTM berdasarkan data historis harga saham Unilever Indonesia. LSTM adalah jenis jaringan saraf rekuren yang mampu mengenali pola jangka panjang dan memiliki kemampuan memori jangka panjang. Dalam proyek ini, LSTM akan digunakan untuk memahami tren dan pola harga saham Unilever Indonesia, dengan harapan dapat memberikan prediksi yang akurat.
+## Latar Belakang
+Perkembangan pasar saham dan investasi semakin menarik minat banyak orang. Salah satu tantangan yang dihadapi oleh para investor adalah memprediksi pergerakan harga saham di masa depan untuk mengambil keputusan investasi yang lebih baik. Dalam proyek ini, fokus diberikan pada prediksi harga saham perusahaan Unilever Indonesia menggunakan metode LSTM (Long Short-Term Memory) berdasarkan data historis dari IHGS (Indonesia Stock Exchange). Tujuan utama proyek ini adalah membantu investor dalam mengoptimalkan keputusan investasi mereka dengan memberikan prediksi harga saham yang lebih akurat.
 
 ## Business Understanding
-
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
+Proyek ini bertujuan untuk mengembangkan model prediksi harga saham menggunakan metode LSTM dengan data historis perusahaan Unilever Indonesia dari IHGS. Dalam hal ini, model akan dilatih menggunakan data historis harga saham Unilever Indonesia untuk memprediksi harga saham di masa depan pada data uji. Dengan menggunakan model prediksi yang akurat, investor dapat memperoleh wawasan yang lebih baik tentang pergerakan harga saham Unilever Indonesia, sehingga dapat mengambil keputusan investasi yang lebih cerdas dan meningkatkan potensi keuntungan mereka.
 
 Bagian laporan ini mencakup:
 
 ### Problem Statements
-
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+Investor seringkali sulit memprediksi harga saham (contoh: Unilever Indonesia) di masa depan, yang membuat mereka kesulitan dalam mengambil keputusan investasi. Pasar saham seringkali berfluktuasi dengan cepat dan banyak faktor yang memengaruhi harga saham, sehingga sulit untuk membuat prediksi yang akurat. Oleh karena itu, dibutuhkan pendekatan yang dapat membantu investor dalam memprediksi harga saham Unilever Indonesia dengan lebih baik.
 
 ### Goals
 
@@ -84,6 +78,7 @@ _Catatan:_
 - Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
 
 **Referensi:**
+- [Unilever Indonesia](https://www.unilever.co.id/our-company/)
 - [Unilever Indonesia Tbk. - Company Background](https://stockbit.com/symbol/UNVR) 
 - [Time-Series Forecasting: Predicting Stock Prices Using An LSTM Model](https://towardsdatascience.com/lstm-time-series-forecasting-predicting-stock-prices-using-an-lstm-model-6223e9644a2f) 
 - [Stock Price Prediction using Machine Learning with Source Code](https://www.projectpro.io/article/stock-price-prediction-using-machine-learning-project/571)
