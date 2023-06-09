@@ -64,9 +64,20 @@ Beberapa metrik evaluasi digunakan untuk mengukur performa model prediksi harga 
 
 Metrik evaluasi ini memberikan gambaran sejauh mana model dapat memprediksi harga saham Unilever Indonesia dengan akurat. Semakin rendah nilai MAE dan RMSE, semakin baik performa model dalam melakukan prediksi yang akurat. 
 
+Hasil evaluasi yang diperoleh adalah sebagai berikut:
+- MAE (Mean Absolute Error): 0.009871991375308926
+- RSME (Root Mean Squared Error): 0.013863547909730151
+- MAPE (Mean Absolute Percent Error): 0.017773489787324806
+
+Model yang telah dibangun menghasilkan hasil evaluasi yang baik dalam memprediksi harga saham. MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
+
+## Kesimpulan
+Berdasarkan hasil evaluasi, model yang telah dibangun menunjukkan performa yang baik dalam memprediksi harga saham. Dalam melakukan evaluasi model, MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
+
 **Referensi:**
 - [Unilever Indonesia](https://www.unilever.co.id/our-company/)
 - [Unilever Indonesia Tbk. - Company Background](https://stockbit.com/symbol/UNVR) 
+- [Indonesia Stock Dataset](https://www.kaggle.com/datasets/muamkh/ihsgstockdata)
 - [Time-Series Forecasting: Predicting Stock Prices Using An LSTM Model](https://towardsdatascience.com/lstm-time-series-forecasting-predicting-stock-prices-using-an-lstm-model-6223e9644a2f) 
 - [Stock Price Prediction using Machine Learning with Source Code](https://www.projectpro.io/article/stock-price-prediction-using-machine-learning-project/571)
 - [Forecasting statistical details](https://www.ibm.com/docs/en/cognos-analytics/11.1.0?topic=forecasting-statistical-details)
