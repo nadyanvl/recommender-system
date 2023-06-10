@@ -15,9 +15,9 @@ Proyek ini bertujuan untuk mengembangkan model prediksi harga saham menggunakan 
 Investor seringkali sulit memprediksi harga saham (contoh: Unilever Indonesia) di masa depan, yang membuat mereka kesulitan dalam mengambil keputusan investasi. Pasar saham seringkali berfluktuasi dengan cepat dan banyak faktor yang memengaruhi harga saham, sehingga sulit untuk membuat prediksi yang akurat. Oleh karena itu, dibutuhkan pendekatan yang dapat membantu investor dalam memprediksi harga saham Unilever Indonesia dengan lebih baik.
 
 ### Goals
-
 - Mengembangkan model prediksi harga saham yang akurat menggunakan metode LSTM.
 - Membantu investor dalam membuat keputusan investasi yang lebih baik berdasarkan prediksi harga saham yang akurat.
+- 
 ### Solution statements
 - Melakukan tuning parameter pada model LSTM, seperti ukuran lapisan LSTM, dropout rate, dan jumlah neuron pada hidden layer.
 - Mengimplementasikan model LSTM yang lebih kompleks, dengan menambahkan lapisan LSTM tambahan, peningkatan jumlah neuron pada hidden layer.
@@ -41,7 +41,9 @@ Berikut grafik visualisasi dataset:
 
 ![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Grafik%20UNVR.png)
 
-Setelah itu, dilakukan Feature Scaling menggunakan MinMaxScaler untuk menormalkan data harga saham sebelum dimasukkan ke dalam model LSTM. Data juga dibagi menjadi data latih (train) dan data uji (test) dengan perbandingan 80:20 menggunakan fungsi split_data.
+Setelah itu, dilakukan Feature Scaling menggunakan MinMaxScaler untuk menormalkan data harga saham sebelum dimasukkan ke dalam model LSTM. 
+
+Data juga dibagi menjadi data latih (train) dan data uji (test) dengan perbandingan 80:20 menggunakan fungsi split_data. Dengan menggunakan 80% data sebagai data latih, model dapat belajar dari sebagian besar pola dan tren dalam data yang tersedia. Hal ini membantu dalam membangun model yang lebih mampu melakukan generalisasi pada data baru. Dan dengan menyisihkan 20% data sebagai data uji, kita memiliki set data yang independen untuk menguji kinerja model yang telah dilatih. Data uji yang tidak digunakan dalam proses pelatihan memberikan ukuran yang lebih objektif tentang seberapa baik model dapat menggeneralisasi pada data yang belum pernah dilihat sebelumnya dan dapat mengidentifikasi apakah model memiliki masalah overfitting atau tidak.
 
 ## Modeling
 Proyek ini menggunakan model LSTM (Long Short-Term Memory) untuk memprediksi harga saham Unilever Indonesia. Model ini dikembangkan menggunakan TensorFlow dengan Sequential API. LSTM adalah jenis arsitektur jaringan saraf rekurensi (RNN) yang dirancang khusus untuk memproses data dengan urutan waktu, seperti data harga saham. LSTM memiliki keunggulan dalam menangani masalah yang terkait dengan memori jangka panjang, yaitu kemampuannya untuk mengingat dan menggunakan informasi masa lalu dalam memprediksi masa depan.
