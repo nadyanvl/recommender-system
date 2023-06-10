@@ -47,7 +47,7 @@ Proyek ini menggunakan model LSTM (Long Short-Term Memory) untuk memprediksi har
 Model LSTM yang dikembangkan memiliki beberapa layer, yaitu layer LSTM, Dropout, dan Dense. Ukuran lapisan LSTM, dropout rate, dan jumlah neuron pada hidden layer diubah untuk mencari konfigurasi yang optimal. Hal ini bertujuan untuk meningkatkan performa model dalam memprediksi harga saham dengan lebih akurat.
 Detail Model sebagai berikut:
 
-![image](https://drive.google.com/file/d/1MTzLBvs095bBbN-rOct1mRqtB49EWmMS/view?usp=drive_link)
+![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Model%20UNVR.png)
 
 Proses pelatihan model dilakukan dengan mengkompilasi model menggunakan optimizer Adam dengan learning rate 0.001 dan loss function Huber. Selama pelatihan, digunakan callbacks EarlyStopping untuk menghentikan pelatihan jika mae pada data validasi sudah cukup kecil.
 
