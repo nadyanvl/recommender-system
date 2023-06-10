@@ -72,9 +72,6 @@ Hasil evaluasi yang diperoleh adalah sebagai berikut:
 | MAE (Mean Avsolute Error)  | 0.009871991375308926  |
 | RSME (Root Mean Squared Error)  | 0.013863547909730151  |
 | MAPE (Mean Absolute Percent Error)  | 0.017773489787324806  |
-- MAE (Mean Absolute Error): 0.009871991375308926
-- RSME (Root Mean Squared Error): 0.013863547909730151
-- MAPE (Mean Absolute Percent Error): 0.017773489787324806
 
 Model yang telah dibangun menghasilkan hasil evaluasi yang baik dalam memprediksi harga saham. MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
 
