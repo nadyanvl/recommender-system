@@ -54,7 +54,7 @@ Proses pelatihan model dilakukan dengan mengkompilasi model menggunakan optimize
 ## Evaluation
 Evaluasi model dilakukan menggunakan data uji. Prediksi harga saham dilakukan pada data uji dan hasilnya dibandingkan dengan harga saham aktual, serta dilakukan plotting grafik harga saham aktual dan harga saham yang diprediksi.
 
-![image](https://drive.google.com/file/d/1U8SPTuDE3vO848mQelsH9tOjO12qWFCy/view?usp=drive_link)
+![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Prediksi%20UNVR.png)
 
 Beberapa metrik evaluasi digunakan untuk mengukur performa model prediksi harga saham seperti Mean Absolute Error (MAE), Root Mean Square Error (RMSE), dan Mean Absolute Percentage Error (MAPE). 
 
