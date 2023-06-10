@@ -37,7 +37,7 @@ Dataset yang digunakan berasal dari  [Indonesia Stock Dataset](https://www.kaggl
 Data historis harga saham Unilever Indonesia dari IHGS diimpor menggunakan library Pandas dan disajikan dalam bentuk DataFrame. Selanjutnya, dilakukan pemahaman terhadap data tersebut dengan menampilkan grafik harga saham Unilever Indonesia dari waktu ke waktu. Grafik ini membantu dalam melihat tren dan pola pergerakan harga saham perusahaan.
 Berikut grafik visualisasi dataset:
 
-![image](https://drive.google.com/file/d/1kv1K41ybwF_D0gJ4fK1WY2x3y6nGHYxU/view?usp=drive_link)
+![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Grafik%20UNVR.png)
 
 Setelah itu, dilakukan Feature Scaling menggunakan MinMaxScaler untuk menormalkan data harga saham sebelum dimasukkan ke dalam model LSTM. Data juga dibagi menjadi data latih (train) dan data uji (test) dengan perbandingan 80:20 menggunakan fungsi split_data.
 
