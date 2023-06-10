@@ -1,11 +1,11 @@
 # Laporan Proyek Machine Learning (Predictive Analytics) - Nadya Novalina
-
+## Judul: Prediksi Harga Saham Unilever Indonesia menggunakan LSTM
 ## Domain Proyek
 
-Prediksi Harga Saham menggunakan Long Short-Term Memory (LSTM) dmenggunakan data dari IHSG perusahaan Unilever Indonesia.
+Prediksi harga saham menggunakan Long Short-Term Memory (LSTM) menggunakan data histori harga saham harian perusahaan Unilever Indonesia.
 
 ## Latar Belakang
-Perkembangan pasar saham dan investasi semakin menarik minat banyak orang. Salah satu tantangan yang dihadapi oleh para investor adalah memprediksi pergerakan harga saham di masa depan untuk mengambil keputusan investasi yang lebih baik. Dalam proyek ini, fokus diberikan pada prediksi harga saham perusahaan Unilever Indonesia menggunakan metode LSTM (Long Short-Term Memory) berdasarkan data historis dari IHGS (Indonesia Stock Exchange). Tujuan utama proyek ini adalah membantu investor dalam mengoptimalkan keputusan investasi mereka dengan memberikan prediksi harga saham yang lebih akurat.
+Perkembangan pasar saham dan investasi semakin menarik minat banyak orang. Salah satu tantangan yang dihadapi oleh para investor adalah memprediksi pergerakan harga saham di masa depan untuk mengambil keputusan investasi yang lebih baik. Dalam proyek ini, fokus diberikan pada prediksi harga saham perusahaan Unilever Indonesia menggunakan metode LSTM (Long Short-Term Memory) berdasarkan data historis yang diperoleh dari Yahoo Finance open dataset. Tujuan utama proyek ini adalah membantu investor dalam mengoptimalkan keputusan investasi mereka dengan memberikan prediksi harga saham yang lebih akurat.
 
 ## Business Understanding
 Proyek ini bertujuan untuk mengembangkan model prediksi harga saham menggunakan metode LSTM dengan data historis perusahaan Unilever Indonesia dari IHGS. Dalam hal ini, model akan dilatih menggunakan data historis harga saham Unilever Indonesia untuk memprediksi harga saham di masa depan pada data uji. Dengan menggunakan model prediksi yang akurat, investor dapat memperoleh wawasan yang lebih baik tentang pergerakan harga saham Unilever Indonesia, sehingga dapat mengambil keputusan investasi yang lebih cerdas dan meningkatkan potensi keuntungan mereka.
@@ -23,15 +23,16 @@ Investor seringkali sulit memprediksi harga saham (contoh: Unilever Indonesia) d
 - Melakukan preprocessing data dengan menggunakan MinMaxScaler untuk melakukan Feature Scaling pada data harga saham. Dengan menggunakan MinMaxScaler, skala data harga saham dapat disesuaikan sehingga nilainya berada dalam rentang 0 hingga 1. Hal ini membantu menghindari perbedaan skala yang signifikan antara fitur-fitur dan memastikan pengaruh yang seimbang terhadap model LSTM.
 
 ## Data Understanding
-Dataset yang digunakan berasal dari  [Indonesia Stock Dataset](https://www.kaggle.com/datasets/muamkh/ihsgstockdata). Dataset ini berisi data historis saham yang terdaftar di IHSG dengan rentang waktu per menit, per jam, dan per hari. Sumber dataset diambil dari data publik Yahoo Finance dan website IDX yang terdaftar pada tab metadata. Proyek ini menggunkaan dataset per hari yang diambil dari 16 April 2001 hingga 6 Januari 2023.
+Dataset yang digunakan berasal dari  [Yahoo Finance Dataset](https://finance.yahoo.com/quote/UNVR.JK?p=UNVR.JK&.tsrc=fin-srch). Dataset ini berisi data historis harian saham Unilever Indonesia dari 3 Januari 2005 hingga 9 Juni 2023 yaitu sebanyak 4563 data. 
 
 ### Variabel-variabel pada IHGS-UNVR dataset adalah sebagai berikut:
-- timestamp = Tanggal dan waktu transaksi saham
-- open = Harga pembukaan
-- low = Harga terendah dalam rentang waktu
-- high = Harga tertinggi dalam rentang waktu
-- close = Harga penutupan
-- volume = Total volume yang diperdagangkan dalam rentang waktu tersebu
+- Date = Tanggal dan waktu transaksi saham
+- Open = Harga pembukaan
+- Low = Harga terendah dalam rentang waktu
+- High = Harga tertinggi dalam rentang waktu
+- Close = Harga penutupan
+- Adj Close = Harga penutupan setelah penyesuaian untuk semua pemisahan dan pembagian dividen yang berlaku
+- Volume = Total volume yang diperdagangkan dalam rentang waktu tersebu
 
 ## Data Preparation
 Data historis harga saham Unilever Indonesia dari IHGS diimpor menggunakan library Pandas dan disajikan dalam bentuk DataFrame. Selanjutnya, dilakukan pemahaman terhadap data tersebut dengan menampilkan grafik harga saham Unilever Indonesia dari waktu ke waktu. Grafik ini membantu dalam melihat tren dan pola pergerakan harga saham perusahaan.
