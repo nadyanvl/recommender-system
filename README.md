@@ -74,7 +74,7 @@ Model yang telah dibangun menghasilkan hasil evaluasi yang baik dalam memprediks
 ## Kesimpulan
 Berdasarkan hasil evaluasi, model yang telah dibangun menunjukkan performa yang baik dalam memprediksi harga saham. Dalam melakukan evaluasi model, MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
 
-**Referensi:**
+## Daftar Pustaka
 - [Unilever Indonesia](https://www.unilever.co.id/our-company/)
 - [Unilever Indonesia Tbk. - Company Background](https://stockbit.com/symbol/UNVR) 
 - [Indonesia Stock Dataset](https://www.kaggle.com/datasets/muamkh/ihsgstockdata)
