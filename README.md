@@ -3,6 +3,7 @@
 ## Domain Proyek
 
 Prediksi harga saham menggunakan Long Short-Term Memory (LSTM) menggunakan data histori harga saham harian perusahaan Unilever Indonesia.
+LSTM digunakan karena dapat mengatasi data time series kompleks, seperti harga saham dan memperhitungkan ketergantungan jangka panjang dalam data historis. Selain itu, LSTM menggunakan mekanisme forget gate untuk mengelola masalah gradien yang menghilang atau meledak saat melatih jaringan.
 
 ## Latar Belakang
 Perkembangan pasar saham dan investasi semakin menarik minat banyak orang. Salah satu tantangan yang dihadapi oleh para investor adalah memprediksi pergerakan harga saham di masa depan untuk mengambil keputusan investasi yang lebih baik. Dalam proyek ini, fokus diberikan pada prediksi harga saham perusahaan Unilever Indonesia menggunakan metode LSTM (Long Short-Term Memory) berdasarkan data historis yang diperoleh dari Yahoo Finance open dataset. Tujuan utama proyek ini adalah membantu investor dalam mengoptimalkan keputusan investasi mereka dengan memberikan prediksi harga saham yang lebih akurat.
@@ -23,9 +24,9 @@ Investor seringkali sulit memprediksi harga saham (contoh: Unilever Indonesia) d
 - Melakukan preprocessing data dengan menggunakan MinMaxScaler untuk melakukan Feature Scaling pada data harga saham. Dengan menggunakan MinMaxScaler, skala data harga saham dapat disesuaikan sehingga nilainya berada dalam rentang 0 hingga 1. Hal ini membantu menghindari perbedaan skala yang signifikan antara fitur-fitur dan memastikan pengaruh yang seimbang terhadap model LSTM.
 
 ## Data Understanding
-Dataset yang digunakan berasal dari  [Yahoo Finance Dataset](https://finance.yahoo.com/quote/UNVR.JK?p=UNVR.JK&.tsrc=fin-srch). Dataset ini berisi data historis harian saham Unilever Indonesia dari 3 Januari 2005 hingga 9 Juni 2023 yaitu sebanyak 4563 data. 
+Dataset yang digunakan berasal dari  [Yahoo Finance Dataset](https://finance.yahoo.com/quote/UNVR.JK?p=UNVR.JK&.tsrc=fin-srch). Dataset ini berisi data historis harian saham Unilever Indonesia dari 3 Januari 2005 hingga 9 Juni 2023. Dataset terdiri dari 4563 baris data dan 7 kolom yaitu: Date, Open, Low, High, Close, Adj Close, dan Volume.
 
-### Variabel-variabel pada IHGS-UNVR dataset adalah sebagai berikut:
+### Detail variabel-variabel pada UNVR dataset adalah sebagai berikut:
 - Date = Tanggal dan waktu transaksi saham
 - Open = Harga pembukaan
 - Low = Harga terendah dalam rentang waktu
@@ -66,6 +67,11 @@ Beberapa metrik evaluasi digunakan untuk mengukur performa model prediksi harga 
 Metrik evaluasi ini memberikan gambaran sejauh mana model dapat memprediksi harga saham Unilever Indonesia dengan akurat. Semakin rendah nilai MAE dan RMSE, semakin baik performa model dalam melakukan prediksi yang akurat. 
 
 Hasil evaluasi yang diperoleh adalah sebagai berikut:
+| Metrics  | Value |
+| ------------- | ------------- |
+| MAE (Mean Avsolute Error)  | 0.009871991375308926  |
+| RSME (Root Mean Squared Error)  | 0.013863547909730151  |
+| MAPE (Mean Absolute Percent Error)  | 0.017773489787324806  |
 - MAE (Mean Absolute Error): 0.009871991375308926
 - RSME (Root Mean Squared Error): 0.013863547909730151
 - MAPE (Mean Absolute Percent Error): 0.017773489787324806
