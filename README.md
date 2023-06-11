@@ -1,12 +1,12 @@
 # Laporan Proyek Machine Learning (Predictive Analytics) - Nadya Novalina
 ## Judul: Prediksi Harga Saham Unilever Indonesia menggunakan LSTM
 ## Domain Proyek
-Perkembangan pasar saham dan investasi semakin menarik minat banyak orang. Salah satu tantangan yang dihadapi oleh para investor adalah memprediksi pergerakan harga saham di masa depan untuk mengambil keputusan investasi yang lebih baik. Dalam proyek ini, fokus diberikan pada prediksi harga saham perusahaan Unilever Indonesia menggunakan metode LSTM (Long Short-Term Memory) berdasarkan data historis yang diperoleh dari Yahoo Finance open dataset. Tujuan utama proyek ini adalah membantu investor dalam mengoptimalkan keputusan investasi mereka dengan memberikan prediksi harga saham yang lebih akurat.
+Perkembangan pasar saham dan investasi semakin menarik minat banyak orang. Salah satu tantangan yang dihadapi oleh para investor adalah memprediksi pergerakan harga saham di masa depan untuk mengambil keputusan investasi yang lebih baik. Dalam proyek ini, dilakukan prediksi harga saham perusahaan Unilever Indonesia menggunakan metode LSTM (Long Short-Term Memory) berdasarkan data historis yang diperoleh dari Yahoo Finance open dataset. Tujuan utama proyek ini adalah membantu investor dalam mengoptimalkan keputusan investasi mereka dengan memberikan prediksi harga saham yang lebih akurat.
 
-Prediksi harga saham menggunakan metode LSTM (Long Short-Term Memory) digunakan dalam proyek ini karena LSTM memiliki kemampuan dalam mengatasi data time series yang kompleks, seperti harga saham. Keunggulan LSTM terletak pada kemampuannya untuk mengingat dan menangkap pola dan tren jangka panjang dalam data historis yang mungkin sulit ditemukan oleh metode prediksi lainnya.
-
+LSTM digunakan dalam proyek ini karena dapat mengatasi data time series yang kompleks, seperti harga saham, dan mampu menangkap pola dan tren jangka panjang dalam data historis.
 Penelitian dalam beberapa tahun terakhir telah menunjukkan bahwa model jaringan LSTM sangat efektif dalam prediksi harga saham. Seperti pada penelitian ini, menggunakan LSTM untuk prediksi saham dan mendapatkan nilai sebesar.
-Dalam konteks prediksi harga saham Unilever Indonesia, penggunaan LSTM diharapkan dapat memberikan hasil prediksi yang lebih akurat, terutama ketika diterapkan pada rentang prediksi yang lebih panjang. Hal ini akan memberikan manfaat yang signifikan bagi para investor dalam pengambilan keputusan investasi yang lebih baik.
+
+Dengan menggunakan LSTM, proyek ini bertujuan untuk memberikan prediksi harga saham Unilever Indonesia yang lebih akurat, terutama dalam jangka waktu yang lebih panjang. Hal ini akan membantu investor dalam pengambilan keputusan investasi yang lebih baik dan mengoptimalkan hasil investasi mereka
 
 ## Business Understanding
 Proyek ini bertujuan untuk mengembangkan model prediksi harga saham menggunakan metode LSTM dengan data historis perusahaan Unilever Indonesia dari IHGS. Dalam hal ini, model akan dilatih menggunakan data historis harga saham Unilever Indonesia untuk memprediksi harga saham di masa depan pada data uji. Dengan menggunakan model prediksi yang akurat, investor dapat memperoleh wawasan yang lebih baik tentang pergerakan harga saham Unilever Indonesia, sehingga dapat mengambil keputusan investasi yang lebih cerdas dan meningkatkan potensi keuntungan mereka.
