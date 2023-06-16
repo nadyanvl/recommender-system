@@ -23,7 +23,7 @@ Investor seringkali sulit memprediksi harga saham (contoh: Unilever Indonesia) d
 ### Goals
 - Mengembangkan model prediksi harga saham yang akurat menggunakan metode LSTM.
 - Membantu investor dalam membuat keputusan investasi yang lebih baik berdasarkan prediksi harga saham yang akurat.
-- 
+
 ### Solution statements
 - Melakukan tuning parameter pada model LSTM, seperti ukuran lapisan LSTM, dropout rate, dan jumlah neuron pada hidden layer.
 - Mengimplementasikan model LSTM yang lebih kompleks, dengan menambahkan lapisan LSTM tambahan, peningkatan jumlah neuron pada hidden layer.
