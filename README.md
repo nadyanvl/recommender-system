@@ -84,3 +84,5 @@ Berdasarkan hasil evaluasi, model yang telah dibangun menunjukkan performa yang 
 
 ## Daftar Pustaka
 [[1]](https://www.ijsr.net/archive/v6i4/ART20172755.pdf) M. Roondiwala, H. Patel, and S. Varma, “Predicting Stock Prices Using LSTM,” International Journal of Science and Research (IJSR) ISSN, vol. 6, no. 4, pp. 2319–7064, 2017, Available: https://www.ijsr.net/archive/v6i4/ART20172755.pdf
+[[2]](https://core.ac.uk/download/pdf/270292706.pdf) A. Arfan and D. Lussiana, “Prediksi Harga Saham Di Indonesia Menggunakan Algoritma Long Short-Term Memory,” Universitas Gunadarma Jl. Margonda Raya No, vol. 3, no. 1, pp. 2581–2327, 2019, Accessed: Jun. 16, 2023. [Online]. Available: https://core.ac.uk/download/pdf/270292706.pdf
+[[3]](https://doi.org/10.1051/e3sconf/202021801026) Q. Ma, “Comparison of ARIMA, ANN and LSTM for Stock Price Prediction,” E3S Web of Conferences, vol. 218, p. 01026, 2020, doi: https://doi.org/10.1051/e3sconf/202021801026.
