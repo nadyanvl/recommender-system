@@ -39,16 +39,13 @@ Dataset yang digunakan berasal dari  [Yahoo Finance Dataset](https://finance.yah
 - Adj Close = Harga penutupan setelah penyesuaian untuk semua pemisahan dan pembagian dividen yang berlaku
 - Volume = Total volume yang diperdagangkan dalam rentang waktu tersebu
 
-Pada proyek ini, fokus prediksi akan difokuskan pada harga Close saham. Model LSTM akan dilatih menggunakan data historis ini untuk memprediksi harga Close saham di masa depan pada data uji. Grafik dari harga Close saham dapat dilihat pada Gambar 1. untuk melihat pergerakan harga seiring waktu:
+Pada proyek ini, fokus prediksi akan difokuskan pada harga Close saham. Model LSTM akan dilatih menggunakan data historis ini untuk memprediksi harga Close saham di masa depan pada data uji. Grafik dari harga Close saham dapat dilihat pada Gambar 1. untuk melihat pergerakan harga seiring waktu dan membantu dalam melihat tren dan pola pergerakan harga saham perusahaan.
 
 ![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Grafik%20UNVR.png)
 Gambar 1. Grafik pergerakan harga close saham Unilever Indonesia dari Januari 2005 hingga Juni 2023
 
 ## Data Preparation
-Data historis harga saham Unilever Indonesia dari IHGS diimpor menggunakan library Pandas dan disajikan dalam bentuk DataFrame. Selanjutnya, dilakukan pemahaman terhadap data tersebut dengan menampilkan grafik harga saham Unilever Indonesia dari waktu ke waktu. Grafik ini membantu dalam melihat tren dan pola pergerakan harga saham perusahaan.
-Berikut grafik visualisasi dataset:
-
-![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Grafik%20UNVR.png)
+Data historis harga saham Unilever Indonesia dari IHGS diimpor menggunakan library Pandas dan disajikan dalam bentuk DataFrame. Selanjutnya, dilakukan pemahaman terhadap data tersebut dengan menampilkan grafik harga saham Unilever Indonesia dari waktu ke waktu seperti pada Gambar 1.
 
 Setelah itu, dilakukan Feature Scaling menggunakan MinMaxScaler untuk menormalkan data harga saham sebelum dimasukkan ke dalam model LSTM. 
 
