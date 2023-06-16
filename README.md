@@ -4,7 +4,7 @@
 Perkembangan pasar saham dan investasi semakin menarik minat banyak orang. Salah satu tantangan yang dihadapi oleh para investor adalah memprediksi pergerakan harga saham di masa depan untuk mengambil keputusan investasi yang lebih baik. Dalam proyek ini, dilakukan prediksi harga saham perusahaan Unilever Indonesia menggunakan metode LSTM (Long Short-Term Memory) berdasarkan data historis yang diperoleh dari Yahoo Finance open dataset. Tujuan utama proyek ini adalah membantu investor dalam mengoptimalkan keputusan investasi mereka dengan memberikan prediksi harga saham yang lebih akurat.
 
 LSTM digunakan dalam proyek ini karena dapat mengatasi data time series yang kompleks, seperti harga saham, dan mampu menangkap pola dan tren jangka panjang dalam data historis.
-Penelitian dalam beberapa tahun terakhir telah menunjukkan bahwa model jaringan LSTM sangat efektif dalam prediksi harga saham. Seperti pada penelitian ini, menggunakan LSTM untuk prediksi saham dan mendapatkan nilai sebesar.
+Penelitian dalam beberapa tahun terakhir telah menunjukkan bahwa model jaringan LSTM sangat efektif dalam prediksi harga saham. Seperti pada penelitian ini [1], menggunakan LSTM untuk prediksi saham dan mendapatkan nilai RSME sebesar 0.00918 pada parameter Open/Close dengan epoch 500.
 
 Dengan menggunakan LSTM, proyek ini bertujuan untuk memberikan prediksi harga saham Unilever Indonesia yang lebih akurat, terutama dalam jangka waktu yang lebih panjang. Hal ini akan membantu investor dalam pengambilan keputusan investasi yang lebih baik dan mengoptimalkan hasil investasi mereka
 
@@ -81,9 +81,4 @@ Model yang telah dibangun menghasilkan hasil evaluasi yang baik dalam memprediks
 Berdasarkan hasil evaluasi, model yang telah dibangun menunjukkan performa yang baik dalam memprediksi harga saham. Dalam melakukan evaluasi model, MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
 
 ## Daftar Pustaka
-- [Unilever Indonesia](https://www.unilever.co.id/our-company/)
-- [Unilever Indonesia Tbk. - Company Background](https://stockbit.com/symbol/UNVR) 
-- [Indonesia Stock Dataset](https://www.kaggle.com/datasets/muamkh/ihsgstockdata)
-- [Time-Series Forecasting: Predicting Stock Prices Using An LSTM Model](https://towardsdatascience.com/lstm-time-series-forecasting-predicting-stock-prices-using-an-lstm-model-6223e9644a2f) 
-- [Stock Price Prediction using Machine Learning with Source Code](https://www.projectpro.io/article/stock-price-prediction-using-machine-learning-project/571)
-- [Forecasting statistical details](https://www.ibm.com/docs/en/cognos-analytics/11.1.0?topic=forecasting-statistical-details)
+[[1] M. Roondiwala, H. Patel, and S. Varma, “Predicting Stock Prices Using LSTM,” International Journal of Science and Research (IJSR) ISSN, vol. 6, no. 4, pp. 2319–7064, 2017, Available: https://www.ijsr.net/archive/v6i4/ART20172755.pdf](https://www.ijsr.net/archive/v6i4/ART20172755.pdf)
