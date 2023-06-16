@@ -104,7 +104,9 @@ Tabel 1. Hasil evaluasi model pada data uji
 Berdasarkan hasil evaluasi yang diperoleh, model prediksi harga saham Unilever Indonesia telah menghasilkan performa yang baik. MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik. Hal ini mengindikasikan bahwa model berhasil memprediksi harga saham dengan tingkat kesalahan yang rendah dan mendekati nilai sebenarnya, sesuai dengan harapan yang telah ditetapkan.
 
 ## Kesimpulan
-Berdasarkan hasil evaluasi, model yang telah dibangun menunjukkan performa yang baik dalam memprediksi harga saham. Dalam melakukan evaluasi model, MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
+Hasil evaluasi menunjukkan bahwa model yang telah dibangun memiliki performa yang baik dalam memprediksi harga saham. Metrik evaluasi yang digunakan, seperti MAE, RMSE, dan MAPE, menunjukkan tingkat kesalahan yang rendah dan kemampuan model dalam mendekati nilai sebenarnya.
+
+Sehingga dapat disimpulkan bahwa model prediksi harga saham Unilever Indonesia telah mencapai tujuan yang diharapkan. Model tersebut dapat digunakan untuk memprediksi harga saham dengan akurasi yang baik, sehingga dapat memberikan informasi berharga dalam pengambilan keputusan investasi.
 
 ## Daftar Pustaka
 [[1]](https://www.ijsr.net/archive/v6i4/ART20172755.pdf) M. Roondiwala, H. Patel, and S. Varma, “Predicting Stock Prices Using LSTM,” International Journal of Science and Research (IJSR) ISSN, vol. 6, no. 4, pp. 2319–7064, 2017, Available: https://www.ijsr.net/archive/v6i4/ART20172755.pdf
