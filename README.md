@@ -71,14 +71,19 @@ Dengan menggunakan konfigurasi model yang optimal dan proses pelatihan yang tepa
 
 ## Evaluation
 ### Pelatihan
-Pelatihan menggunakan batch size sebesar 32 dan berlangsung selama 11 epoch karena menggunakan EarlyStopping callback apabila MAE (Mean Absolute Error) telah mencapai nilai < 0.0001. plot loass dan MAE yang diperoleh dapat dilihat pada Gambar 4. Grafik loss dan MAE saat pelatihan model digunakan untuk memantau kinerja pelatihan. Grafik loss menunjukkan perubahan nilai loss selama pelatihan. Pada awal pelatihan, loss cenderung tinggi karena model masih belum memiliki pemahaman yang baik tentang data. Namun, seiring dengan berjalannya epoch, loss cenderung menurun karena model mulai mempelajari pola dalam data. Grafik MAE menunjukkan perubahan nilai MAE selama pelatihan. MAE mengukur selisih absolut rata-rata antara nilai yang diprediksi oleh model dan nilai yang diamati. Semakin rendah MAE, semakin baik model Anda dalam memprediksi harga saham dengan akurat.
+Pelatihan menggunakan batch size sebesar 32 dan berlangsung selama 11 epoch. Model menggunakan EarlyStopping callback dengan kondisi berhenti jika MAE (Mean Absolute Error) mencapai nilai < 0.0001. Grafik loss dan MAE yang diperoleh saat pelatihan dapat dilihat pada Gambar 4. Grafik loss dan MAE saat pelatihan model digunakan untuk memantau kinerja pelatihan. Pada awal pelatihan, loss cenderung tinggi karena model masih belum memiliki pemahaman yang baik tentang data. Namun, seiring berjalannya epoch, loss cenderung menurun karena model mulai mempelajari pola dalam data. Grafik MAE juga menunjukkan perubahan nilai MAE yang menurun seiring dengan berjalannya epoch. MAE mengukur selisih absolut rata-rata antara nilai yang diprediksi oleh model dan nilai yang diamati.
 
 ![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/loss%20UNVR.png)
 Gambar 4. Loss dan MAE saat pelatihan
 
+### Evaluasi
 Evaluasi model dilakukan menggunakan data uji. Prediksi harga saham dilakukan pada data uji dan hasilnya dibandingkan dengan harga saham aktual, serta dilakukan plotting grafik harga saham aktual dan harga saham yang diprediksi.
 
 ![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Prediksi%20UNVR.png)
+Gambar 5. Hasil prediksi pada data uji 
+
+![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Prediksi%20UNVR%202.png)
+Gambar 6. Hasil prediksi pada data uji menggunakan seluruh data dengan nilai aktual
 
 Beberapa metrik evaluasi digunakan untuk mengukur performa model prediksi harga saham seperti Mean Absolute Error (MAE), Root Mean Square Error (RMSE), dan Mean Absolute Percentage Error (MAPE). 
 
@@ -86,16 +91,17 @@ Beberapa metrik evaluasi digunakan untuk mengukur performa model prediksi harga 
 - Root Mean Square Error (RMSE): Akar kuadrat dari MSE. MSE adalah jumlah selisih kuadrat antara nilai yang diprediksi oleh model dan nilai yang diamati, yang kemudian dibagi dengan jumlah titik data historis dikurangi jumlah parameter dalam model. 
 - MAPE (Mean Absolute Percentage Error): Selisih persentase absolut rata-rata antara nilai yang diprediksi oleh model dan nilai data yang diamati.
 
-Metrik evaluasi ini memberikan gambaran sejauh mana model dapat memprediksi harga saham Unilever Indonesia dengan akurat. Semakin rendah nilai MAE dan RMSE, semakin baik performa model dalam melakukan prediksi yang akurat. 
+Metrik evaluasi ini memberikan gambaran sejauh mana model dapat memprediksi harga saham Unilever Indonesia dengan akurat. Semakin rendah nilai MAE, RMSE, dan MAPE semakin baik performa model dalam melakukan prediksi yang akurat. 
 
 Hasil evaluasi yang diperoleh adalah sebagai berikut:
+Tabel 1. Hasil evaluasi model pada data uji
 | Metrics  | Value |
 | ------------- | ------------- |
 | MAE (Mean Avsolute Error)  | 0.008960752282264449  |
 | RSME (Root Mean Squared Error)  | 0.012929452282302365  |
 | MAPE (Mean Absolute Percent Error)  | 0.01839643243171354  |
 
-Model yang telah dibangun menghasilkan hasil evaluasi yang baik dalam memprediksi harga saham. MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
+Berdasarkan hasil evaluasi yang diperoleh, model prediksi harga saham Unilever Indonesia telah menghasilkan performa yang baik. MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik. Hal ini mengindikasikan bahwa model berhasil memprediksi harga saham dengan tingkat kesalahan yang rendah dan mendekati nilai sebenarnya, sesuai dengan harapan yang telah ditetapkan.
 
 ## Kesimpulan
 Berdasarkan hasil evaluasi, model yang telah dibangun menunjukkan performa yang baik dalam memprediksi harga saham. Dalam melakukan evaluasi model, MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
