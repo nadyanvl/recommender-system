@@ -82,8 +82,8 @@ Evaluasi model dilakukan menggunakan data uji. Prediksi harga saham dilakukan pa
 ![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Prediksi%20UNVR.png)
 Gambar 5. Hasil prediksi pada data uji 
 
-![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/prediksi%20UNVR%202.pngg)
-Gambar 6. Hasil prediksi pada data uji menggunakan seluruh data dengan nilai harga aktual
+![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/prediksi%20UNVR%202.png)
+Gambar 6. Hasil prediksi pada data uji menggunakan seluruh data dengan nilai harga sebenarnya
 
 Beberapa metrik evaluasi digunakan untuk mengukur performa model prediksi harga saham seperti Mean Absolute Error (MAE), Root Mean Square Error (RMSE), dan Mean Absolute Percentage Error (MAPE). 
 
