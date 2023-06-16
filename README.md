@@ -57,12 +57,16 @@ Gambar 2. Grafik pembagian data pelatihan (80%0 dan data uji (20%)
 ## Modeling
 Proyek ini menggunakan model LSTM (Long Short-Term Memory) untuk memprediksi harga saham Unilever Indonesia. Model ini dikembangkan menggunakan TensorFlow dengan Sequential API. LSTM adalah jenis arsitektur jaringan saraf rekurensi (RNN) yang secara khusus dirancang untuk memproses data berurutan, seperti data harga saham. Keunggulan LSTM terletak pada kemampuannya dalam menangani masalah memori jangka panjang, di mana ia dapat mengingat dan menggunakan informasi masa lalu untuk memprediksi masa depan. Dalam LSTM, terdapat sel memori yang menggantikan neuron tradisional di lapisan tersembunyi jaringan. Dengan adanya sel memori ini, jaringan mampu menghubungkan informasi jarak jauh dalam urutan waktu, memungkinkan pemahaman yang dinamis terhadap struktur data dari waktu ke waktu, serta memberikan kemampuan prediksi yang lebih akurat.
 
-Model LSTM yang dikembangkan memiliki beberapa layer, yaitu layer LSTM, Dropout, dan Dense. Ukuran lapisan LSTM, dropout rate, dan jumlah neuron pada hidden layer diubah untuk mencari konfigurasi yang optimal. Hal ini bertujuan untuk meningkatkan performa model dalam memprediksi harga saham dengan lebih akurat.
+Dalam model LSTM yang dikembangkan, terdapat tiga jenis layer yang digunakan, yaitu lapisan LSTM, Dropout, dan Dense. Lapisan LSTM adalah komponen inti dari model LSTM, yang bertanggung jawab untuk memproses dan memahami data berurutan dengan memanfaatkan informasi memori jangka panjang. Lapisan Dropout digunakan untuk mengurangi overfitting dengan secara acak mengabaikan sebagian output dari lapisan sebelumnya selama proses pelatihan. Lapisan Dense, sebagai lapisan terakhir, bertanggung jawab untuk mengubah output dari lapisan sebelumnya menjadi bentuk yang sesuai dengan jumlah neuron output yang diinginkan. 
 Detail Model sebagai berikut:
 
 ![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Model%20UNVR.png)
 
-Proses pelatihan model dilakukan dengan mengkompilasi model menggunakan optimizer Adam dengan learning rate 0.001 dan loss function Huber. Selama pelatihan, digunakan callbacks EarlyStopping untuk menghentikan pelatihan jika mae pada data validasi sudah cukup kecil.
+Konfigurasi model mencakup tuning parameter seperti ukuran lapisan LSTM, dropout rate, dan jumlah neuron pada hidden layer. Proses tuning ini bertujuan untuk mencari kombinasi yang optimal untuk meningkatkan performa prediksi harga saham. Ukuran lapisan LSTM perlu dipertimbangkan dengan memperhatikan kompleksitas data dan kebutuhan pemrosesan informasi jangka panjang. Dropout rate yang tepat dapat membantu menghindari overfitting dan meningkatkan generalisasi pada data uji. Jumlah neuron pada hidden layer juga dapat mempengaruhi kemampuan model dalam mempelajari pola dan membuat prediksi yang akurat. KOmfigurasi ini digunakan setelah melakukan beberapa pengujian.
+
+Proses pelatihan model melibatkan kompilasi model menggunakan optimizer Adam dengan learning rate 0.001 dan loss function Huber. Optimizer Adam digunakan untuk mengoptimalkan proses pelatihan dengan mengatur laju pembelajaran adaptif. Loss function Huber digunakan sebagai metrik evaluasi untuk mengukur kesalahan prediksi model. Callback EarlyStopping digunakan untuk menghentikan pelatihan jika mean absolute error (mae) pada data validasi sudah mencapai tingkat yang cukup kecil, sehingga mencegah model dari overfitting.
+
+Dengan menggunakan konfigurasi model yang optimal dan proses pelatihan yang tepat, diharapkan model LSTM dapat memberikan prediksi harga saham Unilever Indonesia yang akurat dan dapat digunakan untuk pengambilan keputusan investasi yang lebih baik.
 
 ## Evaluation
 Evaluasi model dilakukan menggunakan data uji. Prediksi harga saham dilakukan pada data uji dan hasilnya dibandingkan dengan harga saham aktual, serta dilakukan plotting grafik harga saham aktual dan harga saham yang diprediksi.
@@ -95,3 +99,5 @@ Berdasarkan hasil evaluasi, model yang telah dibangun menunjukkan performa yang 
 [[2]](https://core.ac.uk/download/pdf/270292706.pdf) A. Arfan and D. Lussiana, “Prediksi Harga Saham Di Indonesia Menggunakan Algoritma Long Short-Term Memory,” Universitas Gunadarma Jl. Margonda Raya No, vol. 3, no. 1, pp. 2581–2327, 2019, Accessed: Jun. 16, 2023. [Online]. Available: https://core.ac.uk/download/pdf/270292706.pdf
 
 [[3]](https://doi.org/10.1051/e3sconf/202021801026) Q. Ma, “Comparison of ARIMA, ANN and LSTM for Stock Price Prediction,” E3S Web of Conferences, vol. 218, p. 01026, 2020, doi: https://doi.org/10.1051/e3sconf/202021801026.
+
+[[4]](https://arxiv.org/pdf/1512.05287.pdf) Y. Gal and Z. Ghahramani, “A Theoretically Grounded Application of Dropout in Recurrent Neural Networks,” 2016. Accessed: Jun. 16, 2023. [Online]. Available: https://arxiv.org/pdf/1512.05287.pdf
