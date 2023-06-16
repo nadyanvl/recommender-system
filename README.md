@@ -100,4 +100,6 @@ Berdasarkan hasil evaluasi, model yang telah dibangun menunjukkan performa yang 
 
 [[3]](https://doi.org/10.1051/e3sconf/202021801026) Q. Ma, “Comparison of ARIMA, ANN and LSTM for Stock Price Prediction,” E3S Web of Conferences, vol. 218, p. 01026, 2020, doi: https://doi.org/10.1051/e3sconf/202021801026.
 
-[[4]](https://arxiv.org/pdf/1512.05287.pdf) Y. Gal and Z. Ghahramani, “A Theoretically Grounded Application of Dropout in Recurrent Neural Networks,” 2016. Accessed: Jun. 16, 2023. [Online]. Available: https://arxiv.org/pdf/1512.05287.pdf
+[[4]](https://doi.org/10.1007/s10462-020-09838-1) G. Van Houdt, C. Mosquera, and G. Nápoles, “A review on the long short-term memory model,” Artificial Intelligence Review, May 2020, doi: https://doi.org/10.1007/s10462-020-09838-1.
+
+[[5]](https://arxiv.org/pdf/1512.05287.pdf) Y. Gal and Z. Ghahramani, “A Theoretically Grounded Application of Dropout in Recurrent Neural Networks,” 2016. Accessed: Jun. 16, 2023. [Online]. Available: https://arxiv.org/pdf/1512.05287.pdf
