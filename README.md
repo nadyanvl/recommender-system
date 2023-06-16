@@ -39,7 +39,7 @@ Dataset yang digunakan berasal dari  [Yahoo Finance Dataset](https://finance.yah
 - Adj Close = Harga penutupan setelah penyesuaian untuk semua pemisahan dan pembagian dividen yang berlaku
 - Volume = Total volume yang diperdagangkan dalam rentang waktu tersebu
 
-Pada proyek ini, fokus prediksi akan difokuskan pada harga Close saham. Model LSTM akan dilatih menggunakan data historis ini untuk memprediksi harga Close saham di masa depan pada data uji. Grafik dari harga Close saham dapat dilihat pada visualisasi berikut untuk melihat pergerakan harga seiring waktu:
+Pada proyek ini, fokus prediksi akan difokuskan pada harga Close saham. Model LSTM akan dilatih menggunakan data historis ini untuk memprediksi harga Close saham di masa depan pada data uji. Grafik dari harga Close saham dapat dilihat pada Gambar 1. untuk melihat pergerakan harga seiring waktu:
 
 ![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Grafik%20UNVR.png)
 Gambar 1. Grafik pergerakan harga close saham Unilever Indonesia dari Januari 2005 hingga Juni 2023
