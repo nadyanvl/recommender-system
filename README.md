@@ -81,4 +81,4 @@ Model yang telah dibangun menghasilkan hasil evaluasi yang baik dalam memprediks
 Berdasarkan hasil evaluasi, model yang telah dibangun menunjukkan performa yang baik dalam memprediksi harga saham. Dalam melakukan evaluasi model, MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
 
 ## Daftar Pustaka
-[[1] M. Roondiwala, H. Patel, and S. Varma, “Predicting Stock Prices Using LSTM,” International Journal of Science and Research (IJSR) ISSN, vol. 6, no. 4, pp. 2319–7064, 2017, Available: https://www.ijsr.net/archive/v6i4/ART20172755.pdf](https://www.ijsr.net/archive/v6i4/ART20172755.pdf)
+[[1]](https://www.ijsr.net/archive/v6i4/ART20172755.pdf) M. Roondiwala, H. Patel, and S. Varma, “Predicting Stock Prices Using LSTM,” International Journal of Science and Research (IJSR) ISSN, vol. 6, no. 4, pp. 2319–7064, 2017, Available: https://www.ijsr.net/archive/v6i4/ART20172755.pdf
