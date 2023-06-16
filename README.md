@@ -61,6 +61,7 @@ Dalam model LSTM yang dikembangkan, terdapat tiga jenis layer yang digunakan, ya
 Detail Model sebagai berikut:
 
 ![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Model%20UNVR.png)
+Gambar 3. Detail Arsitektur Model
 
 Konfigurasi model mencakup tuning parameter seperti ukuran lapisan LSTM, dropout rate, dan jumlah neuron pada hidden layer. Proses tuning ini bertujuan untuk mencari kombinasi yang optimal untuk meningkatkan performa prediksi harga saham. Ukuran lapisan LSTM perlu dipertimbangkan dengan memperhatikan kompleksitas data dan kebutuhan pemrosesan informasi jangka panjang. Dropout rate yang tepat dapat membantu menghindari overfitting dan meningkatkan generalisasi pada data uji. Jumlah neuron pada hidden layer juga dapat mempengaruhi kemampuan model dalam mempelajari pola dan membuat prediksi yang akurat. KOmfigurasi ini digunakan setelah melakukan beberapa pengujian.
 
@@ -69,6 +70,12 @@ Proses pelatihan model melibatkan kompilasi model menggunakan optimizer Adam den
 Dengan menggunakan konfigurasi model yang optimal dan proses pelatihan yang tepat, diharapkan model LSTM dapat memberikan prediksi harga saham Unilever Indonesia yang akurat dan dapat digunakan untuk pengambilan keputusan investasi yang lebih baik.
 
 ## Evaluation
+### Pelatihan
+Pelatihan menggunakan batch size sebesar 32 dan berlangsung selama 11 epoch karena menggunakan EarlyStopping callback apabila MAE (Mean Absolute Error) telah mencapai nilai < 0.0001. plot loass dan MAE yang diperoleh dapat dilihat pada Gambar 4. Grafik loss dan MAE saat pelatihan model digunakan untuk memantau kinerja pelatihan. Grafik loss menunjukkan perubahan nilai loss selama pelatihan. Pada awal pelatihan, loss cenderung tinggi karena model masih belum memiliki pemahaman yang baik tentang data. Namun, seiring dengan berjalannya epoch, loss cenderung menurun karena model mulai mempelajari pola dalam data. Grafik MAE menunjukkan perubahan nilai MAE selama pelatihan. MAE mengukur selisih absolut rata-rata antara nilai yang diprediksi oleh model dan nilai yang diamati. Semakin rendah MAE, semakin baik model Anda dalam memprediksi harga saham dengan akurat.
+
+![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/loss%20UNVR.png)
+Gambar 4. Loss dan MAE saat pelatihan
+
 Evaluasi model dilakukan menggunakan data uji. Prediksi harga saham dilakukan pada data uji dan hasilnya dibandingkan dengan harga saham aktual, serta dilakukan plotting grafik harga saham aktual dan harga saham yang diprediksi.
 
 ![image](https://github.com/nadyanvl/StockPricePrediction/blob/main/assets/Prediksi%20UNVR.png)
@@ -84,9 +91,9 @@ Metrik evaluasi ini memberikan gambaran sejauh mana model dapat memprediksi harg
 Hasil evaluasi yang diperoleh adalah sebagai berikut:
 | Metrics  | Value |
 | ------------- | ------------- |
-| MAE (Mean Avsolute Error)  | 0.009871991375308926  |
-| RSME (Root Mean Squared Error)  | 0.013863547909730151  |
-| MAPE (Mean Absolute Percent Error)  | 0.017773489787324806  |
+| MAE (Mean Avsolute Error)  | 0.008960752282264449  |
+| RSME (Root Mean Squared Error)  | 0.012929452282302365  |
+| MAPE (Mean Absolute Percent Error)  | 0.01839643243171354  |
 
 Model yang telah dibangun menghasilkan hasil evaluasi yang baik dalam memprediksi harga saham. MAE, RMSE, dan MAPE yang rendah menunjukkan bahwa model memiliki tingkat kesalahan yang rendah dan mampu mendekati nilai sebenarnya dengan akurasi yang baik.
 
