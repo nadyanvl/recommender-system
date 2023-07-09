@@ -1,7 +1,7 @@
 # Laporan Proyek Machine Learning (Recommender System) - Nadya Novalina
 # Sephora Products Recommender System
 # Domain Proyek
-Proyek ini bertujuan untuk mengembangkan sistem rekomendasi produk untuk toko online Sephora. Fokus utama dari proyek ini adalah memberikan rekomendasi produk yang relevan dan personal kepada pelanggan Sephora berdasarkan preferensi dan karakteristik mereka. Dalam proyek ini, digunakan dua pendekatan yang berbeda, yaitu content-based filtering dan collaborative filtering [[1]](#-daftar-pustaka).
+Proyek ini bertujuan untuk mengembangkan sistem rekomendasi produk untuk toko online Sephora. Fokus utama dari proyek ini adalah memberikan rekomendasi produk yang relevan dan personal kepada pelanggan Sephora berdasarkan preferensi dan karakteristik mereka. Dalam proyek ini, digunakan dua pendekatan yang berbeda, yaitu content-based filtering dan collaborative filtering [[1]](#daftar-pustaka).
 
 Dalam metode content-based filtering, sistem akan menganalisis atribut-atribut produk seperti bahan-bahan, kategori utama, dan kategori tersier untuk mengidentifikasi kesamaan antar produk. Dengan menggunakan metode perhitungan cosine similarity, sistem akan merekomendasikan produk yang mirip dengan produk yang telah diminati oleh pengguna. Hal ini memungkinkan pengguna untuk mendapatkan rekomendasi produk yang sesuai dengan preferensi mereka.
 
