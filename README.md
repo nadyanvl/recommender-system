@@ -29,7 +29,24 @@ Proyek ini bertujuan untuk mengembangkan sistem rekomendasi produk untuk toko on
 * Mengidentifikasi pengguna dengan preferensi serupa berdasarkan data rating dan merekomendasikan produk yang mendapatkan rating tinggi dari pengguna-pengguna serupa tersebut.
 
 # Data Understanding
+Dataset yang digunakan dalam proyek ini diperoleh dari kumpulan data Kaggle yang berjudul "[Sephora Products and Skincare Reviews](https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews)". Dataset ini menyediakan informasi komprehensif tentang lebih dari 8.000 produk kecantikan yang tersedia di toko online Sephora. Dataset ini mencakup berbagai atribut untuk setiap produk, seperti nama produk, merek produk, harga, bahan-bahan, penilaian, dan fitur-fitur relevan lainnya.
 
+Dataset yang digunakan dalam proyek ini telah melalui proses pembersihan. Terdapat dua file utama: "product_info.csv" dan "reviews_1500_end.csv".
+
+File "product_info.csv" memiliki 8.000 baris dan 6 kolom. Setiap baris mewakili sebuah produk kecantikan yang tersedia di toko online Sephora, dan kolom-kolomnya berisi informasi sebagai berikut:
+
+product_id: ID unik untuk produk tersebut di situs web.
+product_name: Nama lengkap produk.
+brand_name: Nama merek produk.
+ingredients: Daftar bahan yang terkandung dalam produk.
+primary_category: Kategori utama produk.
+tertiary_category: Kategori tersier produk.
+
+File "reviews_1500_end.csv" terdiri dari 49.977 baris dan 3 kolom. Setiap baris mewakili ulasan pengguna untuk produk tertentu, dan kolom-kolomnya meliputi:
+
+author_id: ID unik untuk penulis ulasan di situs web.
+product_id: ID unik untuk produk tersebut.
+rating: Penilaian yang diberikan oleh penulis ulasan untuk produk dengan skala 1 hingga 5.
 
 # Data Preparation
 
