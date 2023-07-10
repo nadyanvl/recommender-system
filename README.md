@@ -33,23 +33,29 @@ Dataset yang digunakan dalam proyek ini diperoleh dari kumpulan data Kaggle yang
 
 Dataset yang digunakan dalam proyek ini telah melalui proses pembersihan. Terdapat dua file utama: "product_info.csv" dan "reviews_1500_end.csv".
 
-File "product_info.csv" memiliki 8.000 baris dan 6 kolom. Setiap baris mewakili sebuah produk kecantikan yang tersedia di toko online Sephora, dan kolom-kolomnya berisi informasi sebagai berikut:
+* File "product_info.csv" memiliki 8.000 baris dan 6 kolom. Setiap baris mewakili sebuah produk kecantikan yang tersedia di toko online Sephora, dan kolom-kolomnya berisi informasi sebagai berikut:
 
-* `product_id`: ID unik untuk produk tersebut di situs web.
-* `product_name`: Nama lengkap produk.
-* `brand_name`: Nama merek produk.
-* `ingredients`: Daftar bahan yang terkandung dalam produk.
-* `primary_category`: Kategori utama produk.
-* `tertiary_category`: Kategori tersier produk.
+  * `product_id`: ID unik untuk produk tersebut di situs web.
+  * `product_name`: Nama lengkap produk.
+  * `brand_name`: Nama merek produk.
+  * `ingredients`: Daftar bahan yang terkandung dalam produk.
+  * `primary_category`: Kategori utama produk.
+  * `tertiary_category`: Kategori tersier produk.
 
-File "reviews_1500_end.csv" terdiri dari 49.977 baris dan 3 kolom. Setiap baris mewakili ulasan pengguna untuk produk tertentu, dan kolom-kolomnya meliputi:
+* File "reviews_1500_end.csv" terdiri dari 49.977 baris dan 3 kolom. Setiap baris mewakili ulasan pengguna untuk produk tertentu, dan kolom-kolomnya meliputi:
 
-* `author_id`: ID unik untuk penulis ulasan di situs web.
-* `product_id`: ID unik untuk produk tersebut.
-* `rating`: Penilaian yang diberikan oleh penulis ulasan untuk produk dengan skala 1 hingga 5.
+  * `author_id`: ID unik untuk penulis ulasan di situs web.
+  * `product_id`: ID unik untuk produk tersebut.
+  * `rating`: Penilaian yang diberikan oleh penulis ulasan untuk produk dengan skala 1 hingga 5.
 
 # Data Preparation
+## Pembersihan Data
+Kolom yang tidak digunakan atau tidak relevan dapat dihapus dari kedua filesehingga dapat menyederhanakan dataset dan fokus pada atribut-atribut yang penting. Selain itu, juga dilakukan penghapusan data pada missing value dan data duplikat untuk memastikan kualitas data yang baik.
 
+## Exploratory Data Analysis
+Pada file "product_info.csv", dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Tujuan dari analisis ini adalah untuk memahami distribusi data, melihat tren atau pola yang menarik, serta mengidentifikasi informasi penting yang dapat digunakan dalam sistem rekomendasi.
+
+Pada file "reviews.csv", analisis data eksploratori dilakukan terhadap atribut-atribut seperti ID penulis ulasan, ID produk, dan rating yang diberikan oleh penulis. Pada tahap ini, dapat dilihat distribusi rating, jumlah ulasan per produk, serta karakteristik penulis ulasan.
 
 # Modeling
 
