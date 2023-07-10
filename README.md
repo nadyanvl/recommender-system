@@ -1,11 +1,11 @@
 # Laporan Proyek Machine Learning (Recommender System) - Nadya Novalina
 # Sephora Products Recommender System
 # Domain Proyek
-Proyek ini bertujuan untuk mengembangkan sistem rekomendasi produk untuk toko online Sephora. Fokus utama dari proyek ini adalah memberikan rekomendasi produk yang relevan dan personal kepada pelanggan Sephora berdasarkan preferensi dan karakteristik mereka. Dalam proyek ini, digunakan dua pendekatan yang berbeda, yaitu content-based filtering dan collaborative filtering [[1]](#daftar-pustaka).
+Proyek ini bertujuan mengembangkan sistem rekomendasi produk untuk toko online Sephora. Fokus utama proyek ini adalah memberikan rekomendasi produk yang relevan dan personal kepada pelanggan Sephora berdasarkan preferensi dan karakteristik mereka. Dalam proyek ini, digunakan dua pendekatan berbeda, yaitu content-based filtering dan collaborative filtering [[1]](#daftar-pustaka).
 
-Dalam metode content-based filtering, sistem akan menganalisis atribut-atribut produk seperti bahan-bahan, kategori utama, dan kategori tersier untuk mengidentifikasi kesamaan antar produk. Dengan menggunakan metode perhitungan cosine similarity, sistem akan merekomendasikan produk yang mirip dengan produk yang telah diminati oleh pengguna. Hal ini memungkinkan pengguna untuk mendapatkan rekomendasi produk yang sesuai dengan preferensi mereka.
+Dalam metode content-based filtering, TfidfVectorizer digunakan untuk mengekstraksi fitur-fitur seperti bahan-bahan, kategori utama, dan kategori tersier dari setiap produk. Fitur-fitur ini kemudian dijadikan sebagai vektor representasi. Selanjutnya, kemiripan antara vektor fitur produk dihitung menggunakan metode cosine similarity. Dengan matriks kemiripan ini, model dapat merekomendasikan produk yang memiliki kesamaan tinggi dengan produk yang diminati oleh pengguna.
 
-Di sisi lain, metode collaborative filtering menggunakan teknik Singular Value Decomposition (SVD) untuk mengidentifikasi kesamaan antar pengguna berdasarkan perilaku rating (penilaian) mereka terhadap produk. Dengan menganalisis data rating, sistem akan mengidentifikasi pengguna-pengguna yang memiliki preferensi yang serupa dan merekomendasikan produk-produk yang mendapatkan rating tinggi dari pengguna-pengguna serupa tersebut. Pendekatan ini memungkinkan adanya rekomendasi yang dipengaruhi oleh preferensi dan perilaku kolektif dari sekelompok pengguna.
+Di sisi lain, metode collaborative filtering digunakan untuk menganalisis perilaku rating (penilaian) pengguna terhadap produk menggunakan teknik Singular Value Decomposition (SVD) untuk mengidentifikasi pola kesamaan antara pengguna berdasarkan data rating. Dengan informasi ini, model dapat merekomendasikan produk yang mendapatkan rating tinggi dari pengguna dengan preferensi serupa. Pendekatan ini memungkinkan memberikan rekomendasi yang dipengaruhi oleh perilaku dan preferensi kolektif dari sekelompok pengguna.
 
 # Business Understanding
 
