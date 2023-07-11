@@ -116,6 +116,21 @@ Kemudian dibuat fungsi untuk menghasilkan rekomendasi produk berdasarkan produk 
 Gambar 7. Top-10 Recommendation: Content-Based Filtering
 
 ## Collaborative Filtering
+Collaborative filtering adalah metode dalam sistem rekomendasi yang menggunakan informasi dari pengguna lain untuk memberikan rekomendasi kepada pengguna. Metode ini mengidentifikasi pengguna dengan preferensi atau perilaku serupa, dan menggunakan informasi dari pengguna-pengguna tersebut untuk meramalkan preferensi atau rekomendasi bagi pengguna target [[1]](#daftar-pustaka)[[3]](#daftar-pustaka).
+
+**Training:**
+Pelatihan model collaborative filtering dilakukan menggunakan algoritma SVD. Dataset dibagi menjadi set pelatihan dan pengujian menggunakan fungsi train_test_split dari pustaka Surprise. Pertama, model SVD dilatih dengan menggunakan cross-validation. Kemudian model SVD tersebut dilatih menggunakan keseluruhan trainset. Metrik evaluasi yang digunakan adalah RMSE (Root Mean Square Error) dan MAE (Mean Absolute Error), yang mengukur keakuratan prediksi model dibandingkan dengan rating sebenarnya.
+
+**Hyperparameter Tuning:**
+Untuk mengoptimalkan model SVD, dilakukan hyperparameter tuning menggunakan GridSearchCV dari pustaka Surprise. GridSearchCV digunakan untuk mencari kombinasi hiperparameter terbaik yang meminimalkan skor RMSE dan MAE. Hiperparameter yang dipertimbangkan dalam proses penyetelan meliputi n_factor, epoch, lr_all (tingkat pembelajaran), dan reg_all (tingkat regularisasi).
+Hiperparameter terbaik yang ditemukan melalui penyetelan adalah n_factor sebesar 50, epoch sebesar 50, lr_all sebesar 0.01, dan reg_all sebesar 0.1. Model SVD kemudian dilatih dengan seluruh trainset menggunakan hiperparameter optimal ini.
+
+**Top-10 Recommmendation (Example Usage):**
+
+Kemudian dibuat fungsi untuk menghasilkan rekomendasi produk berdasarkan pengguna spesifik dengan memprediksi rating untuk produk-produk yang belum dinilai oleh pengguna tersebut. Prediksi tersebut akan diurutkan secara menurun. Berikut contoh hasil top-10 rekomendasi produk berdasarkan pengguna dengan ID tertentu.
+
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/Top-10%20collaborative%20filtering.png)
+Gambar 8. Top-10 Recommendation: Content-Based Filtering
 
 # Evaluation
 
