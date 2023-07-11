@@ -62,12 +62,16 @@ Gambar 1. Dataframe Produk
 Gambar 2. Dataframe Review
 
 ## Exploratory Data Analysis
-Pada file "product_info.csv", dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Tujuan dari analisis ini adalah untuk memahami distribusi data, melihat tren atau pola yang menarik, serta mengidentifikasi informasi penting yang dapat digunakan dalam sistem rekomendasi.
-
+Pada file "product_info.csv", dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Pada tahap ini dapat dilihat Distribusi produk per kategori utama, top-10 brand, top-10 ingredient semua product.
+* Kategori produk yang banyak ada di Sephora adalah skincare dan makeup
+* Brand yang memiliki jumlah produk yangbanyak adalah Sephora collection dan Clinique
+* Top ingredient yang banyak terdapat pada produk secara keseluruhan adalah glycerin dan phenoxyethanol
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_product.png)
 Gambar 3. EDA Produk
 
-Pada file "reviews.csv", analisis data eksploratori dilakukan terhadap atribut-atribut seperti ID penulis ulasan, ID produk, dan rating yang diberikan oleh penulis. Pada tahap ini, dapat dilihat distribusi rating, jumlah ulasan per produk, serta karakteristik penulis ulasan.
+Pada file "reviews.csv", analisis data eksploratori dilakukan terhadap atribut-atribut seperti ID penulis ulasan, ID produk, dan rating yang diberikan oleh penulis. Pada tahap ini, dapat dilihat distribusi rating, rata-rata rating per product, jumlah rating per product, rata-rata rating.
+* lebih dari 30000 users memberikan rating 5 untuk produk
+* Tiap produk rata-rata memiliki rating yang bagus walaupun terdapat produk dengan rating yang rendah
 
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_1.png)
 Gambar 4. EDA Review part 1
