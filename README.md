@@ -72,7 +72,7 @@ Gambar 3. EDA Produk
 Pada file "reviews.csv", analisis data eksploratori dilakukan terhadap atribut-atribut seperti ID penulis ulasan, ID produk, dan rating yang diberikan oleh penulis. Pada tahap ini, dapat dilihat distribusi rating, rata-rata rating per product, jumlah rating per product, rata-rata rating.
 * Lebih dari 30.000 pengguna memberikan rating 5 untuk produk. Hal ini menunjukkan bahwa banyak pengguna memberikan rating tinggi (5) untuk produk yang ada dalam dataset.
 * Rata-rata produk memiliki rating yang bagus. Meskipun ada produk dengan rating yang rendah, secara umum, rata-rata rating produk cenderung tinggi. Ini menunjukkan bahwa sebagian besar produk dalam dataset memiliki rating yang baik.
-* 
+
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_1.png)
 Gambar 4. EDA Review part 1
 
@@ -81,11 +81,13 @@ Gambar 5. EDA Review part 2
 
 # Modeling
 ## Content-Based Filtering
-Metode content-based filtering adalah
+Content-based filtering adalah metode dalam sistem rekomendasi yang menggunakan kesamaan atribut atau konten dari produk yang telah disukai atau dilihat oleh pengguna sebelumnya. Sistem menganalisis atribut produk seperti deskripsi, fitur, kategori, dan metadata lainnya. Profil pengguna dibangun berdasarkan preferensi atau interaksi dengan produk, lalu sistem mencari kesamaan antara atribut produk dalam profil pengguna dan database produk [[1]](#daftar-pustaka)[[2]](#daftar-pustaka).
 
 **Feature Engineering:**
 
-Metode content-based filtering dilakukan dengan menggunakan algoritma TF-IDF (Term Frequency-Inverse Document Frequency) untuk mengekstraksi fitur-fitur dari produk. Fitur-fitur yang diekstraksi meliputi bahan-bahan, kategori utama, dan kategori tersier. Setelah itu, fitur -fitur tersebut digabungkan menjadi satu vektor representasi menggunakan hstack. Hal ini bertujuan untuk menggabungkan informasi dari berbagai atribut produk menjadi satu representasi fitur yang komprehensif. 
+Metode content-based filtering dikembangkan dengan menggunakan algoritma TF-IDF (Term Frequency-Inverse Document Frequency) untuk mengekstraksi fitur-fitur dari produk. Fitur-fitur yang diekstraksi meliputi bahan-bahan, kategori utama, dan kategori tersier. Setelah itu, fitur -fitur tersebut digabungkan menjadi satu vektor representasi menggunakan hstack. Hal ini bertujuan untuk menggabungkan informasi dari berbagai atribut produk menjadi satu representasi fitur yang komprehensif. 
+
+Model TF-IDF adalah sebuah metode analisis yang mengevaluasi seberapa relevan suatu kata dalam sebuah dokumen dalam kumpulan dokumen. TF-IDF merupakan gabungan dari dua metode ekstraksi, yaitu TF (Term Frequency) dan IDF (Inverse Document Frequency). TF menghitung seberapa sering sebuah kata muncul dalam suatu dokumen dan IDF menghitung seberapa umum atau langka sebuah kata dalam seluruh kumpulan dokumen, sehingga mengetahui pentingnya sebuah kata [[4]](#daftar-pustaka).
 
 **Similarity Calculation:**
 
@@ -113,3 +115,5 @@ Gambar 7. Top-10 Recommendation: Content-Based Filtering
 [[2]](http://www.ijceit.org/published/volume10/issue1/1Vol10No1.pdf) Patty, Joanna, et al. “Recommendations System for Purchase of Cosmetics Using Content- Based Filtering.” International Journal of Computer Engineering and Information Technology, vol. 10, no. 1, 2018, pp. 1–5, www.ijceit.org/published/volume10/issue1/1Vol10No1.pdf. Accessed 10 July 2023.
 
 [[3]](https://doi.org/10.35313/jitel.v2.i2.2022.103-110) Shalannanda, Wervyan, et al. “Singular Value Decomposition Model Application for E-Commerce Recommendation System.” JITEL (Jurnal Ilmiah Telekomunikasi, Elektronika, Dan Listrik Tenaga), vol. 2, no. 2, 30 Sept. 2022, pp. 103–110, https://doi.org/10.35313/jitel.v2.i2.2022.103-110. Accessed 7 Apr. 2023.
+
+[[4]](https://www.ijrte.org/wp-content/uploads/papers/v11i4/D73311111422.pdf) Yeruva, Sagar, et al. “Apparel Recommendation System Using Content-Based Filtering.” International Journal of Recent Technology and Engineering (IJRTE), vol. 11, no. 4, 30 Nov. 2022, pp. 46–51, https://doi.org/10.35940/ijrte.d7331.1111422. Accessed 13 Feb. 2023.
