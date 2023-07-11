@@ -118,10 +118,13 @@ Gambar 7. Top-10 Recommendation: Content-Based Filtering
 ## Collaborative Filtering
 Collaborative filtering adalah metode dalam sistem rekomendasi yang menggunakan informasi dari pengguna lain untuk memberikan rekomendasi kepada pengguna. Metode ini mengidentifikasi pengguna dengan preferensi atau perilaku serupa, dan menggunakan informasi dari pengguna-pengguna tersebut untuk meramalkan preferensi atau rekomendasi bagi pengguna target [[1]](#daftar-pustaka)[[3]](#daftar-pustaka).
 
-**Training:**
+**SVD (Singular Value Decomposition):**
+SVD (Singular Value Decomposition) adalah teknik untuk memecah sebuah matriks menjadi tiga matriks terpisah: U, Σ, dan V. Matriks Σ berisi nilai-nilai singular yang menunjukkan signifikansi dari vektor singular. SVD digunakan untuk mengurangi dimensi data dan menangkap informasi penting dalam matriks asli. Rumus SVD adalah A = UΣV^T, di mana U dan V adalah matriks singular kiri dan kanan, dan Σ adalah matriks diagonal dengan nilai-nilai singular [3](#daftar-pustaka).
+
 Pelatihan model collaborative filtering dilakukan menggunakan algoritma SVD. Dataset dibagi menjadi set pelatihan dan pengujian menggunakan fungsi train_test_split dari pustaka Surprise. Pertama, model SVD dilatih dengan menggunakan cross-validation. Kemudian model SVD tersebut dilatih menggunakan keseluruhan trainset. Metrik evaluasi yang digunakan adalah RMSE (Root Mean Square Error) dan MAE (Mean Absolute Error), yang mengukur keakuratan prediksi model dibandingkan dengan rating sebenarnya.
 
 **Hyperparameter Tuning:**
+
 Untuk mengoptimalkan model SVD, dilakukan hyperparameter tuning menggunakan GridSearchCV dari pustaka Surprise. GridSearchCV digunakan untuk mencari kombinasi hiperparameter terbaik yang meminimalkan skor RMSE dan MAE. Hiperparameter yang dipertimbangkan dalam proses penyetelan meliputi n_factor, epoch, lr_all (tingkat pembelajaran), dan reg_all (tingkat regularisasi).
 Hiperparameter terbaik yang ditemukan melalui penyetelan adalah n_factor sebesar 50, epoch sebesar 50, lr_all sebesar 0.01, dan reg_all sebesar 0.1. Model SVD kemudian dilatih dengan seluruh trainset menggunakan hiperparameter optimal ini.
 
