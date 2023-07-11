@@ -3,9 +3,7 @@
 # Domain Proyek
 Proyek ini bertujuan mengembangkan sistem rekomendasi produk untuk toko online Sephora. Fokus utama proyek ini adalah memberikan rekomendasi produk yang relevan dan personal kepada pelanggan Sephora berdasarkan preferensi dan karakteristik mereka. Dalam proyek ini, digunakan dua pendekatan berbeda, yaitu content-based filtering dan collaborative filtering [[1]](#daftar-pustaka).
 
-Dalam metode content-based filtering, TF-IDF Vectorizer digunakan untuk mengekstraksi fitur-fitur seperti bahan-bahan, kategori utama, dan kategori tersier dari setiap produk. Fitur-fitur ini kemudian dijadikan sebagai vektor representasi. Selanjutnya, kemiripan antara vektor fitur produk dihitung menggunakan metode cosine similarity. Dengan matriks kemiripan ini, model dapat merekomendasikan produk yang memiliki kesamaan tinggi dengan produk yang diminati oleh pengguna.
-
-Di sisi lain, metode collaborative filtering digunakan untuk menganalisis rating (penilaian) pengguna terhadap produk menggunakan teknik Singular Value Decomposition (SVD) untuk mengidentifikasi pola kesamaan antara pengguna berdasarkan data rating. Dengan informasi ini, model dapat merekomendasikan produk yang mendapatkan rating tinggi dari pengguna dengan preferensi serupa. Pendekatan ini memungkinkan memberikan rekomendasi yang dipengaruhi oleh perilaku dan preferensi kolektif dari sekelompok pengguna.
+Dalam content-based filtering, fitur-fitur produk diekstraksi menggunakan TF-IDF Vectorizer dan dijadikan vektor representasi. Kemudian, kemiripan antara vektor fitur dihitung dengan cosine similarity untuk merekomendasikan produk yang mirip dengan yang diminati pengguna. Collaborative filtering menggunakan data rating pengguna dan SVD untuk mengidentifikasi pola kesamaan antara pengguna. Dengan informasi ini, model merekomendasikan produk yang mendapatkan rating tinggi dari pengguna dengan preferensi serupa.
 
 Beberapa penelitian sebelumnya telah dilakukan dalam bidang sistem rekomendasi produk dan menunjukkan hasil yang menjanjikan. Misalnya, dalam penelitian [[2]](#daftar-pustaka), mereka mengimplementasikan metode content-based filtering pada sistem rekomendasi produk kosmetik dan memberikan rekomendasi berdasarkan kebutuhan khusus pengguna. Penelitian lainnya [[3]](#daftar-pustaka) mencoba pendekatan collaborative filtering pada produk di platform e-commerce dengan menggunakan algoritma SVD dan menghasilkan nilai root mean square error (RMSE) sebesar 1.055586 dan dengan mengoptimalkan hyperparameter, mereka berhasil mendapatkan model dengan nilai RMSE sebesar 1.041784.
 
@@ -112,12 +110,13 @@ Gambar 6. Hasil matrix similarity menggunakan cosine similarity
 
 **Top-10 Recommmendation (Example Usage):**
 
-Fungsi get_recommendations dibuat untuk menghasilkan rekomendasi produk berdasarkan produk yang diberikan. Fungsi ini menghitung kemiripan antara produk yang diberikan dengan produk lain dalam dataset, dan mengambil produk dengan kemiripan tertinggi sebagai rekomendasi. Berikut contoh hasil top-10 rekomendasi produk berdasarkan produk dengan ID tertentu.
+Kemudian dibuat fungsi untuk menghasilkan rekomendasi produk berdasarkan produk yang diberikan dengan menghitung kemiripan antara produk yang diberikan dengan produk lain dalam dataset, dan mengambil produk dengan kemiripan tertinggi sebagai rekomendasi. Berikut contoh hasil top-10 rekomendasi produk berdasarkan produk dengan ID tertentu.
 
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/Top-10%20content-based%20filtering.png)
 Gambar 7. Top-10 Recommendation: Content-Based Filtering
 
 ## Collaborative Filtering
+
 # Evaluation
 
 # Kesimpulan
