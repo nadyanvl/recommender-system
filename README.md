@@ -35,16 +35,47 @@ Dengan mengembangkan sistem rekomendasi produk yang efektif, diharapkan Sephora 
 # Data Understanding
 Dataset yang digunakan dalam proyek ini diperoleh dari kumpulan data Kaggle yang berjudul "[Sephora Products and Skincare Reviews](https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews)". Dataset ini menyediakan informasi komprehensif tentang lebih dari 8.000 produk kecantikan yang tersedia di toko online Sephora. Dataset ini mencakup berbagai atribut untuk setiap produk, seperti nama produk, merek produk, harga, bahan-bahan, penilaian, dan fitur-fitur relevan lainnya.
 
-Dataset yang digunakan dalam proyek ini telah melalui proses [data cleaning](#data-cleaning). Terdapat dua file utama: "product_info.csv" dan "reviews_1500_end.csv".
+Dataset yang digunakan dalam proyek ini yaitu: "product_info.csv" dan "reviews_1500_end.csv".
 
-* File "product_info.csv" memiliki 6.642 baris dan 6 kolom. Setiap baris mewakili sebuah produk kecantikan yang tersedia di toko online Sephora, dan kolom-kolomnya berisi informasi sebagai berikut:
+* File "product_info.csv" memiliki 8.494 baris dan 27 kolom. Setiap baris mewakili sebuah produk kecantikan yang tersedia di toko online Sephora, dan kolom-kolomnya berisi informasi sebagai berikut:
 
-  * `product_id`: ID unik untuk produk tersebut di situs web.
-  * `product_name`: Nama lengkap produk.
-  * `brand_name`: Nama merek produk.
+  * `product_id`: ID unik untuk produk tersebut di situs web
+  * `product_name`: Nama lengkap produk
+  * `brand_id`: Identifier unik untuk merek produk dari situs web
+  * `brand_name`: Nama merek produk
+  * `loves_count` Jumlah orang yang telah menandai produk ini sebagai favorit
+  * `rating`: Rating rata-rata produk berdasarkan ulasan pengguna
+  * `reviews`: Jumlah ulasan pengguna untuk produk tersebut
+  * `size`: Ukuran produk, dapat dalam oz, ml, g, paket, atau unit lain tergantung pada jenis produk
+  * `variation_type`: Tipe parameter variasi untuk produk
+  * `variation_value`: Nilai spesifik dari parameter variasi untuk produk
+  * `variation_desc`: Deskripsi parameter variasi untuk produk
   * `ingredients`: Daftar bahan yang terkandung dalam produk.
-  * `primary_category`: Kategori utama produk.
-  * `tertiary_category`: Kategori tersier produk.
+  * `price_usd`: Harga produk dalam dolar Amerika Serikat
+  * `value_price_usd`: Potensi penghematan biaya produk, ditampilkan di situs web di sebelah harga reguler
+  * `sale_price_usd`: Harga jual produk dalam dolar Amerika Serikat
+  * `limited_edition`: Menunjukkan apakah produk ini edisi terbatas atau tidak
+  * `new`: Menunjukkan apakah produk ini baru atau tidak
+  * `online_only`: Menunjukkan apakah produk ini hanya dijual secara online atau tidak 
+  * `out_of_stock`: Menunjukkan apakah produk ini saat ini kosong atau tidak
+  * `sephora_exclusive`: Menunjukkan apakah produk ini eksklusif untuk Sephora atau tidak
+  * `highlights`: Daftar tag atau fitur yang menyoroti atribut-atribut produk
+  * `primary_category`: Kategori utama produk
+  * `secondary_category`: Kategori kedua
+  * `tertiary_category`: Kategori tersier produk
+  * `child_count`: Jumlah variasi produk yang tersedia
+  * `child_max_price`: Harga tertinggi di antara variasi produk
+  * `child_min_price`: Harga terendah di antara variasi produk
+ 
+Gambaran dataframe dari product_info.csv dapat dilihat pada Tabel 1. yang berisi beberapa data terkait rincian produk.
+
+Tabel 1. Dataframe produk
+| product_id |       product_name       | brand_id | brand_name | loves_count | rating | reviews |     size      |     variation_type      |   variation_value   | ... | online_only | out_of_stock | sephora_exclusive |                     highlights                    | primary_category | secondary_category |  tertiary_category  | child_count | child_max_price | child_min_price |
+|------------|--------------------------|----------|------------|-------------|--------|---------|---------------|-------------------------|---------------------|-----|-------------|--------------|-------------------|---------------------------------------------------|------------------|---------------------|---------------------|-------------|-----------------|-----------------|
+|  P473671   | Fragrance Discovery Set  |   6342   |   19-69    |     6320    | 3.6364 |   11.0  |     NaN       |          NaN            |        NaN          | ... |      1      |      0       |        0          | ['Unisex/ Genderless Scent', 'Warm & Spicy Scen... |     Fragrance     |  Value & Gift Sets |  Perfume Gift Sets |      0      |       NaN       |       NaN       |
+|  P473668   |  La Habana Eau de Parfum |   6342   |   19-69    |     3827    | 4.1538 |   13.0  | 3.4 oz/ 100 mL| Size + Concentration + Formulation | 3.4 oz/ 100 mL | ... |      1      |      0       |        0          | ['Unisex/ Genderless Scent', 'Layerable Scent'... |     Fragrance     |       Women       |      Perfume       |      2      |      85.0       |      30.0       |
+|  P473662   | Rainbow Bar Eau de Parfum|   6342   |   19-69    |     3253    |  4.25  |   16.0  | 3.4 oz/ 100 mL| Size + Concentration + Formulation | 3.4 oz/ 100 mL | ... |      1      |      0       |        0          | ['Unisex/ Genderless Scent', 'Layerable Scent'... |     Fragrance     |       Women       |      Perfume       |      2      |      75.0       |      30.0       |
+
 
 * File "reviews_1500_end.csv" terdiri dari 49.977 baris dan 3 kolom. Setiap baris mewakili ulasan pengguna untuk produk tertentu, dan kolom-kolomnya meliputi:
 
