@@ -31,7 +31,7 @@ Proyek ini bertujuan untuk mengembangkan sistem rekomendasi produk untuk toko on
 # Data Understanding
 Dataset yang digunakan dalam proyek ini diperoleh dari kumpulan data Kaggle yang berjudul "[Sephora Products and Skincare Reviews](https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews)". Dataset ini menyediakan informasi komprehensif tentang lebih dari 8.000 produk kecantikan yang tersedia di toko online Sephora. Dataset ini mencakup berbagai atribut untuk setiap produk, seperti nama produk, merek produk, harga, bahan-bahan, penilaian, dan fitur-fitur relevan lainnya.
 
-Dataset yang digunakan dalam proyek ini telah melalui proses pembersihan. Terdapat dua file utama: "product_info.csv" dan "reviews_1500_end.csv".
+Dataset yang digunakan dalam proyek ini telah melalui proses [data cleaning](#data-cleaning). Terdapat dua file utama: "product_info.csv" dan "reviews_1500_end.csv".
 
 * File "product_info.csv" memiliki 8.000 baris dan 6 kolom. Setiap baris mewakili sebuah produk kecantikan yang tersedia di toko online Sephora, dan kolom-kolomnya berisi informasi sebagai berikut:
 
@@ -49,8 +49,16 @@ Dataset yang digunakan dalam proyek ini telah melalui proses pembersihan. Terdap
   * `rating`: Penilaian yang diberikan oleh penulis ulasan untuk produk dengan skala 1 hingga 5.
 
 # Data Preparation
-## Pembersihan Data
-Kolom yang tidak digunakan atau tidak relevan dapat dihapus dari kedua filesehingga dapat menyederhanakan dataset dan fokus pada atribut-atribut yang penting. Selain itu, juga dilakukan penghapusan data pada missing value dan data duplikat untuk memastikan kualitas data yang baik.
+## Data Cleaning
+Kolom yang tidak digunakan atau tidak relevan dapat dihapus dari kedua file sehingga dapat menyederhanakan dataset dan fokus pada atribut-atribut yang penting. Selain itu, juga dilakukan penghapusan data pada missing value dan data duplikat untuk memastikan kualitas data yang baik.
+
+Hasil data cleaning:
+
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/product_data.png?token=GHSAT0AAAAAAB7FVDYQQLYX46SDMXAIMKD4ZFMWQHQ)
+Gambar 1. Dataframe Produk
+
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/review_data.png?token=GHSAT0AAAAAAB7FVDYQVBIVVFADI7BY2ROOZFMWKVQ)
+Gambar 2. Dataframe Review
 
 ## Exploratory Data Analysis
 Pada file "product_info.csv", dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Tujuan dari analisis ini adalah untuk memahami distribusi data, melihat tren atau pola yang menarik, serta mengidentifikasi informasi penting yang dapat digunakan dalam sistem rekomendasi.
