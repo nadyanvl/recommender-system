@@ -77,7 +77,7 @@ Gambar 4. EDA Review part 1
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_2.png)
 Gambar 5. EDA Review part 2
 
-# Modeling
+# Modeling and Results
 ## Content-Based Filtering
 Content-based filtering adalah metode dalam sistem rekomendasi yang menggunakan kesamaan atribut atau konten dari produk yang telah disukai atau dilihat oleh pengguna sebelumnya. Sistem menganalisis atribut produk seperti deskripsi, fitur, kategori, dan metadata lainnya. Profil pengguna dibangun berdasarkan preferensi atau interaksi dengan produk, lalu sistem mencari kesamaan antara atribut produk dalam profil pengguna dan database produk [[1]](#daftar-pustaka)[[2]](#daftar-pustaka).
 
