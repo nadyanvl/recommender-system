@@ -14,7 +14,7 @@ Beberapa penelitian sebelumnya telah dilakukan dalam bidang sistem rekomendasi p
 Dengan menggabungkan pengetahuan dari penelitian-penelitian sebelumnya, proyek ini bertujuan untuk mengembangkan sistem rekomendasi produk yang dapat memberikan rekomendasi yang lebih relevan dan personal kepada pelanggan. Dan diharapkan dapat meningkatkan pengalaman berbelanja pelanggan dan mendorong peningkatan penjualan produk.
 
 # Business Understanding
-Proyek ini bertujuan untuk mengembangkan sistem rekomendasi produk untuk toko online Sephora. Sephora adalah sebuah perusahaan kosmetik dan produk kecantikan yang terkenal dengan berbagai macam produk yang ditawarkan kepada pelanggan. Namun, dengan banyaknya pilihan produk yang tersedia, pelanggan seringkali kesulitan untuk menemukan produk yang sesuai dengan preferensi dan kebutuhan mereka. Oleh karena itu, tujuan proyek ini adalah untuk memberikan pengalaman belanja yang lebih baik kepada pelanggan dengan menyediakan rekomendasi produk yang relevan dan personal.
+Proyek ini bertujuan untuk mengembangkan sistem rekomendasi produk untuk toko online Sephora. Sephora adalah sebuah perusahaan kosmetik dan produk kecantikan yang terkenal dengan berbagai macam produk yang ditawarkan kepada pelanggan. Namun, dengan banyaknya pilihan produk yang tersedia, pelanggan seringkali kesulitan untuk menemukan produk yang sesuai dengan preferensi dan kebutuhan mereka. Proses pencarian produk yang memakan waktu lama juga dapat mengurangi kepuasan pelanggan dan efisiensi proses berbelanja. Oleh karena itu, tujuan utama proyek ini adalah untuk memberikan pengalaman belanja yang lebih baik kepada pelanggan dengan menyediakan rekomendasi produk yang relevan dan personal.
 
 ## Problem Statements
 * Pelanggan Sephora kesulitan menemukan produk yang sesuai dengan preferensi dan karakteristik mereka di tengah banyaknya pilihan produk.
@@ -23,6 +23,8 @@ Proyek ini bertujuan untuk mengembangkan sistem rekomendasi produk untuk toko on
 ## Goals
 * Mengembangkan sistem rekomendasi produk yang dapat memberikan rekomendasi yang relevan dan personal kepada pelanggan berdasarkan preferensi dan karakteristik mereka.
 * Meningkatkan pengalaman berbelanja, kepuasan pelanggan, dan penjualan melalui pencarian yang lebih cepat, rekomendasi yang akurat, dan pengalaman berbelanja yang lebih baik.
+
+Dengan mengembangkan sistem rekomendasi produk yang efektif, diharapkan Sephora dapat mengatasi tantangan yang dihadapi oleh pelanggan dalam menemukan produk yang sesuai dan meningkatkan pengalaman belanja mereka. Rekomendasi produk yang relevan dan personal akan membantu pelanggan menemukan produk yang sesuai dengan preferensi dan karakteristik mereka dengan lebih mudah dan cepat. Hal ini akan meningkatkan kepuasan pelanggan, efisiensi proses berbelanja, dan pada akhirnya, mendorong peningkatan penjualan produk di toko online Sephora.
 
 ## Solution statements
 * Mengimplementasikan metode content-based filtering dengan menggunakan TF-IDF Vectorizer untuk mengekstraksi fitur-fitur seperti bahan-bahan, kategori utama, dan kategori tersier dari setiap produk.
