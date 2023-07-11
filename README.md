@@ -54,25 +54,25 @@ Kolom yang tidak digunakan atau tidak relevan dapat dihapus dari kedua file sehi
 
 **Hasil data cleaning:**
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/product_data.png?token=GHSAT0AAAAAAB7FVDYQQLYX46SDMXAIMKD4ZFMWQHQ)
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/product_data.png)
 Gambar 1. Dataframe Produk
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/review_data.png?token=GHSAT0AAAAAAB7FVDYQVBIVVFADI7BY2ROOZFMWKVQ)
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/review_data.png)
 
 Gambar 2. Dataframe Review
 
 ## Exploratory Data Analysis
 Pada file "product_info.csv", dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Tujuan dari analisis ini adalah untuk memahami distribusi data, melihat tren atau pola yang menarik, serta mengidentifikasi informasi penting yang dapat digunakan dalam sistem rekomendasi.
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_product.png?token=GHSAT0AAAAAAB7FVDYQI5FZWT4VNP2HCXKAZFMWUJA)
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_product.png)
 Gambar 3. EDA Produk
 
 Pada file "reviews.csv", analisis data eksploratori dilakukan terhadap atribut-atribut seperti ID penulis ulasan, ID produk, dan rating yang diberikan oleh penulis. Pada tahap ini, dapat dilihat distribusi rating, jumlah ulasan per produk, serta karakteristik penulis ulasan.
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_1.png?token=GHSAT0AAAAAAB7FVDYQB4QR4REH4K54TVQOZFMWVWA)
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_1.png)
 Gambar 4. EDA Review part 1
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_2.png?token=GHSAT0AAAAAAB7FVDYRRA4BRRXPQHWTYCPCZFMWVYQ)
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_2.png)
 Gambar 5. EDA Review part 2
 
 # Modeling
