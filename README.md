@@ -52,12 +52,13 @@ Dataset yang digunakan dalam proyek ini telah melalui proses [data cleaning](#da
 ## Data Cleaning
 Kolom yang tidak digunakan atau tidak relevan dapat dihapus dari kedua file sehingga dapat menyederhanakan dataset dan fokus pada atribut-atribut yang penting. Selain itu, juga dilakukan penghapusan data pada missing value dan data duplikat untuk memastikan kualitas data yang baik.
 
-Hasil data cleaning:
+**Hasil data cleaning:**
 
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/product_data.png?token=GHSAT0AAAAAAB7FVDYQQLYX46SDMXAIMKD4ZFMWQHQ)
 Gambar 1. Dataframe Produk
 
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/review_data.png?token=GHSAT0AAAAAAB7FVDYQVBIVVFADI7BY2ROOZFMWKVQ)
+
 Gambar 2. Dataframe Review
 
 ## Exploratory Data Analysis
