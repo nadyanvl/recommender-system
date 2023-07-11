@@ -83,16 +83,22 @@ Gambar 5. EDA Review part 2
 ## Content-Based Filtering
 Metode content-based filtering adalah
 
-### Feature Engineering:
+**Feature Engineering:**
+
 Metode content-based filtering dilakukan dengan menggunakan algoritma TF-IDF (Term Frequency-Inverse Document Frequency) untuk mengekstraksi fitur-fitur dari produk. Fitur-fitur yang diekstraksi meliputi bahan-bahan, kategori utama, dan kategori tersier. Setelah itu, fitur -fitur tersebut digabungkan menjadi satu vektor representasi menggunakan hstack. Hal ini bertujuan untuk menggabungkan informasi dari berbagai atribut produk menjadi satu representasi fitur yang komprehensif. 
 
-### Similarity Calculation:
+**Similarity Calculation:**
+
 Selanjutnya, dilakukan perhitungan kemiripan menggunakan metode cosine similarity. Metode ini digunakan untuk mengukur sejauh mana dua vektor fitur tersebut mirip satu sama lain. Hasilnya adalah matriks kemiripan yang menunjukkan tingkat kemiripan antara setiap pasang produk dalam dataset.
+
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/cosine%20similarity.png)
+
 Gambar 6. Hasil matrix similarity menggunakan cosine similarity
 
-### Top-10 Recommmendation (Example Usage):
+**Top-10 Recommmendation (Example Usage):**
+
 Fungsi get_recommendations dibuat untuk menghasilkan rekomendasi produk berdasarkan produk yang diberikan. Fungsi ini menghitung kemiripan antara produk yang diberikan dengan produk lain dalam dataset, dan mengambil produk dengan kemiripan tertinggi sebagai rekomendasi. Berikut contoh hasil top-10 rekomendasi produk berdasarkan produk dengan ID tertentu.
+
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/Top-10%20content-based%20filtering.png)
 Gambar 7. Top-10 Recommendation: Content-Based Filtering
 
