@@ -93,6 +93,19 @@ Model TF-IDF adalah sebuah metode analisis yang mengevaluasi seberapa relevan su
 
 Selanjutnya, dilakukan perhitungan kemiripan menggunakan metode cosine similarity. Metode ini digunakan untuk mengukur sejauh mana dua vektor fitur tersebut mirip satu sama lain. Hasilnya adalah matriks kemiripan yang menunjukkan tingkat kemiripan antara setiap pasang produk dalam dataset.
 
+Cosine similarity adalah metode untuk mengukur tingkat kesamaan antara dua vektor. Dalam konteks dokumen, cosine similarity digunakan untuk membandingkan kesamaan antara dua dokumen berdasarkan representasi vektor dari dokumen-dokumen tersebut [2](#daftar-pustaka).
+
+Rumus perhitungan cosine similarity:
+
+cosine similarity (x, y) = Σ(xi * yi) / (√(Σ(xi^2)) * √(Σ(yi^2)))
+
+Di mana:
+- x dan y adalah dua vektor yang akan dibandingkan.
+- xi adalah elemen ke-i pada vektor x.
+- yi adalah elemen ke-i pada vektor y.
+
+Perhitungan cosine similarity melibatkan perkalian dan penjumlahan elemen-elemen vektor, yang kemudian dibagi dengan perkalian magnitudo masing-masing vektor. Hasil perhitungan cosine similarity berada dalam rentang -1 hingga 1. Nilai yang mendekati 1 menunjukkan tingkat kesamaan yang tinggi antara dua vektor, sementara nilai yang mendekati -1 menunjukkan perbedaan yang besar. Nilai yang mendekati 0 menunjukkan bahwa dua vektor tidak memiliki kesamaan yang signifikan.
+
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/cosine%20similarity.png)
 
 Gambar 6. Hasil matrix similarity menggunakan cosine similarity
