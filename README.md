@@ -107,7 +107,7 @@ Tabel 2. Dataframe review
 
 # Data Preparation
 ## Data Cleaning
-Kolom yang tidak digunakan atau tidak relevan dapat dihapus dari kedua file sehingga dapat menyederhanakan dataset dan fokus pada atribut-atribut yang penting. Selain itu, juga dilakukan penghapusan data pada missing value dan data duplikat untuk memastikan kualitas data yang baik.
+Pada proses preprocessing/cleaning, Hanya kolom-kolom yang relevan untuk analisis lebih lanjut yang dipilih. Kolom-kolom yang dipilih pada file product_info.csv adalah product_id, product_name, brand_name, ingredients, primary_category, dan tertiary_category. Hal ini karena pada sistem rekomendasi yang akan dikembangkan untuk content-based filtering menggunakan data produk ini akan menggunakan informasi ingredient, kategori utama dan kategori tertier untuk atribut sistem rekomendasinya. Setelah memilih kolom-kolom yang relevan, dilakukan penanganan terhadap data yang memiliki nilai null. Selanjutnya, dilakukan penanganan terhadap data yang terduplikat. Dari hasil perhitungan tersebut, tidak ditemukan adanya data yang terduplikat dalam dataframe produk. Terakhir, dilakukan penghapusan baris yang memiliki nilai null dalam dataframe produk. Dengan melakukan penghapusan tersebut, dataframe yang digunakan dalam analisis lebih lanjut tidak memiliki nilai null dan untuk memastikan kualitas data yang baik.
 
 **Hasil data cleaning:**
 
