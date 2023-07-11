@@ -63,16 +63,16 @@ Gambar 2. Dataframe Review
 
 ## Exploratory Data Analysis
 Pada file "product_info.csv", dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Pada tahap ini dapat dilihat Distribusi produk per kategori utama, top-10 brand, top-10 ingredient semua product.
-* Kategori produk yang banyak ada di Sephora adalah skincare dan makeup
-* Brand yang memiliki jumlah produk yangbanyak adalah Sephora collection dan Clinique
-* Top ingredient yang banyak terdapat pada produk secara keseluruhan adalah glycerin dan phenoxyethanol
+* Kategori produk yang paling banyak terdapat di Sephora adalah skincare dan makeup.
+* Brand yang memiliki jumlah produk yang paling banyak adalah Sephora Collection dan Clinique. 
+* Bahan (ingredient) yang paling banyak terdapat pada produk secara keseluruhan adalah glycerin dan phenoxyethanol. 
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_product.png)
 Gambar 3. EDA Produk
 
 Pada file "reviews.csv", analisis data eksploratori dilakukan terhadap atribut-atribut seperti ID penulis ulasan, ID produk, dan rating yang diberikan oleh penulis. Pada tahap ini, dapat dilihat distribusi rating, rata-rata rating per product, jumlah rating per product, rata-rata rating.
-* lebih dari 30000 users memberikan rating 5 untuk produk
-* Tiap produk rata-rata memiliki rating yang bagus walaupun terdapat produk dengan rating yang rendah
-
+* Lebih dari 30.000 pengguna memberikan rating 5 untuk produk. Hal ini menunjukkan bahwa banyak pengguna memberikan rating tinggi (5) untuk produk yang ada dalam dataset.
+* Rata-rata produk memiliki rating yang bagus. Meskipun ada produk dengan rating yang rendah, secara umum, rata-rata rating produk cenderung tinggi. Ini menunjukkan bahwa sebagian besar produk dalam dataset memiliki rating yang baik.
+* 
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_1.png)
 Gambar 4. EDA Review part 1
 
