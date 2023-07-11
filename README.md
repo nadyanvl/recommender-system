@@ -64,7 +64,16 @@ Gambar 2. Dataframe Review
 ## Exploratory Data Analysis
 Pada file "product_info.csv", dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Tujuan dari analisis ini adalah untuk memahami distribusi data, melihat tren atau pola yang menarik, serta mengidentifikasi informasi penting yang dapat digunakan dalam sistem rekomendasi.
 
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_product.png?token=GHSAT0AAAAAAB7FVDYQI5FZWT4VNP2HCXKAZFMWUJA)
+Gambar 3. EDA Produk
+
 Pada file "reviews.csv", analisis data eksploratori dilakukan terhadap atribut-atribut seperti ID penulis ulasan, ID produk, dan rating yang diberikan oleh penulis. Pada tahap ini, dapat dilihat distribusi rating, jumlah ulasan per produk, serta karakteristik penulis ulasan.
+
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_1.png?token=GHSAT0AAAAAAB7FVDYQB4QR4REH4K54TVQOZFMWVWA)
+Gambar 4. EDA Review part 1
+
+![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_2.png?token=GHSAT0AAAAAAB7FVDYRRA4BRRXPQHWTYCPCZFMWVYQ)
+Gambar 5. EDA Review part 2
 
 # Modeling
 
