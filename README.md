@@ -79,9 +79,31 @@ Tabel 1. Dataframe produk
 
 * File "reviews_1500_end.csv" terdiri dari 49.977 baris dan 3 kolom. Setiap baris mewakili ulasan pengguna untuk produk tertentu, dan kolom-kolomnya meliputi:
 
-  * `author_id`: ID unik untuk penulis ulasan di situs web.
-  * `product_id`: ID unik untuk produk tersebut.
-  * `rating`: Penilaian yang diberikan oleh penulis ulasan untuk produk dengan skala 1 hingga 5.
+  * `author_id`: ID unik untuk penulis ulasan di situs web
+  * `rating`: Penilaian yang diberikan oleh penulis ulasan untuk produk dengan skala 1 hingga 5
+  * `is_recommended`: Menunjukkan apakah penulis merekomendasikan produk atau tidak
+  * `helpfulness`: Rasio antara jumlah ulasan positif dan total ulasan: helpfulness = total_pos_feedback_count / total_feedback_count
+  * `total_feedback_count`: Jumlah total umpan balik (penilaian positif dan negatif) yang diberikan oleh pengguna untuk ulasan
+  * `total_neg_feedback_count`: Jumlah pengguna yang memberikan penilaian negatif untuk ulasan
+  * `total_pos_feedback_count`: Jumlah pengguna yang memberikan penilaian positif untuk ulasan
+  * `submission_time`: Tanggal ulasan diposting di situs web dalam format 'yyyy-mm-dd'
+  * `review_text`: Teks utama dari ulasan yang ditulis oleh penulis
+  * `review_title`: Judul ulasan yang ditulis oleh penulis
+  * `skin_tone`: Tone kulit penulis
+  * `eye_color`: Warna mata penulis 
+  * `skin_type`: Tipe kulit penulis
+  * `hair_color`: Warna rambut penulis
+  * `product_id`: ID unik untuk produk tersebut
+
+Gambaran dataframe dari reviews_1500_end.csv dapat dilihat pada Tabel 2. yang berisi beberapa data terkait review pengguna.
+
+Tabel 2. Dataframe review
+| Unnamed: 0 | author_id    | rating | is_recommended | helpfulness | total_feedback_count | total_neg_feedback_count | total_pos_feedback_count | submission_time | review_text                                          | review_title                          | skin_tone     | eye_color | skin_type   | hair_color | product_id | product_name                                     | brand_name | price_usd |
+|------------|--------------|--------|----------------|-------------|----------------------|--------------------------|--------------------------|-----------------|------------------------------------------------------|---------------------------------------|---------------|-----------|-------------|------------|------------|--------------------------------------------------|------------|-----------|
+| 0          | 1945004256   | 5      | 1              | 1.0         | 0.000000             | 2                        | 2                        | 2022-12-10      | I absolutely L-O-V-E this oil. I have acne pro...    | A must have!                          | lightMedium   | green     | combination | NaN        | P379064    | Lotus Balancing & Hydrating Natural Face Treat... | Clarins    | 65.0      |
+| 1          | 5478482359   | 3      | 1              | 1.0         | 0.333333             | 3                        | 2                        | 2021-12-17      | I gave this 3 stars because it give me tiny li...    | it keeps oily skin under control      | mediumTan    | brown     | oily        | black      | P379064    | Lotus Balancing & Hydrating Natural Face Treat... | Clarins    | 65.0      |
+| 2          | 29002209922  | 5      | 1              | 1.0         | 1.000000             | 2                        | 0                        | 2021-06-07      | Works well as soon as I wash my face and pat d...    | Worth the money!                      | lightMedium   | brown     | dry         | black      | P379064    | Lotus Balancing & Hydrating Natural Face Treat... | Clarins    | 65.0      |
+
 
 # Data Preparation
 ## Data Cleaning
