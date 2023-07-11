@@ -161,6 +161,11 @@ Tabel 1. Hasil evaluasi model SVD pada data uji (full trainset)
 Hasil evaluasi menggunakan model SVD pada data uji (dengan full trainset) menunjukkan bahwa penggunaan hyperparameter tuning memiliki dampak positif terhadap kualitas prediksi. Model dengan hyperparameter tuning menghasilkan nilai RMSE dan MAE yang lebih rendah, menandakan kemampuan yang lebih baik dalam memperkirakan rating yang sebenarnya. Selain itu, terdapat peningkatan yang signifikan dalam presisi, recall, dan F1-score, yang mengindikasikan kemampuan yang lebih baik dalam mengklasifikasikan ulasan dan memberikan rekomendasi produk yang lebih relevan. Oleh karena itu, penerapan hyperparameter tuning pada model SVD dapat meningkatkan akurasi dan kualitas sistem rekomendasi produk, yang berpotensi meningkatkan kepuasan pelanggan dan penjualan.
 
 # Kesimpulan
+Dalam proyek pengembangan sistem rekomendasi produk untuk toko online Sephora, telah diimplementasikan dua pendekatan: content-based filtering dan collaborative filtering. Pendekatan content-based filtering menggunakan TF-IDF Vectorizer untuk mengekstraksi fitur-fitur produk dan menghitung kemiripan antara produk menggunakan metode cosine similarity. Pendekatan collaborative filtering menggunakan metode Singular Value Decomposition (SVD) untuk menganalisis perilaku rating pengguna.
+
+Melalui evaluasi model, hasilnya menunjukkan bahwa penggunaan cosine similarity dalam content-based filtering mampu memberikan rekomendasi produk yang relevan dengan preferensi pengguna. Selain itu, melalui hyperparameter tuning pada model SVD, diperoleh model dengan performa yang lebih baik dalam memprediksi rating dan memberikan rekomendasi produk.
+
+Dengan penerapan sistem rekomendasi ini, diharapkan dapat meningkatkan pengalaman berbelanja pelanggan dengan rekomendasi yang akurat dan personal. Hal ini berpotensi meningkatkan kepuasan pelanggan, penjualan, dan retensi pelanggan di toko online Sephora.
 
 # Daftar Pustaka
 [[1]](https://iopscience.iop.org/article/10.1088/1742-6596/1897/1/012024/pdf) Abdul Hussien, Farah Tawfiq, et al. “Recommendation Systems for E-Commerce Systems an Overview.” Journal of Physics: Conference Series, vol. 1897, no. 1, 1 May 2021, p. 012024, https://doi.org/10.1088/1742-6596/1897/1/012024.
