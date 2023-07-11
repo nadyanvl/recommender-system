@@ -119,6 +119,7 @@ Gambar 7. Top-10 Recommendation: Content-Based Filtering
 Collaborative filtering adalah metode dalam sistem rekomendasi yang menggunakan informasi dari pengguna lain untuk memberikan rekomendasi kepada pengguna. Metode ini mengidentifikasi pengguna dengan preferensi atau perilaku serupa, dan menggunakan informasi dari pengguna-pengguna tersebut untuk meramalkan preferensi atau rekomendasi bagi pengguna target [[1]](#daftar-pustaka)[[3]](#daftar-pustaka).
 
 **SVD (Singular Value Decomposition):**
+
 SVD (Singular Value Decomposition) adalah teknik untuk memecah sebuah matriks menjadi tiga matriks terpisah: U, Σ, dan V. Matriks Σ berisi nilai-nilai singular yang menunjukkan signifikansi dari vektor singular. SVD digunakan untuk mengurangi dimensi data dan menangkap informasi penting dalam matriks asli. Rumus SVD adalah A = UΣV^T, di mana U dan V adalah matriks singular kiri dan kanan, dan Σ adalah matriks diagonal dengan nilai-nilai singular [[3]](#daftar-pustaka).
 
 Pelatihan model collaborative filtering dilakukan menggunakan algoritma SVD. Dataset dibagi menjadi set pelatihan dan pengujian menggunakan fungsi train_test_split dari pustaka Surprise. Pertama, model SVD dilatih dengan menggunakan cross-validation. Kemudian model SVD tersebut dilatih menggunakan keseluruhan trainset. Metrik evaluasi yang digunakan adalah RMSE (Root Mean Square Error) dan MAE (Mean Absolute Error), yang mengukur keakuratan prediksi model dibandingkan dengan rating sebenarnya.
@@ -136,6 +137,28 @@ Kemudian dibuat fungsi untuk menghasilkan rekomendasi produk berdasarkan penggun
 Gambar 8. Top-10 Recommendation: Collaborative Filtering
 
 # Evaluation
+## Collaborative Filtering
+Evaluasi model collaborative filtering dilakukan untuk mengukur kinerja dan akurasi model dalam memberikan rekomendasi produk kepada pengguna. Terdapat beberapa metrik evaluasi yang umum digunakan:
+
+* Root Mean Square Error (RMSE): Metrik ini mengukur perbedaan antara rating yang diprediksi oleh model dengan rating sebenarnya. RMSE menghitung akar dari rata-rata dari kuadrat selisih antara rating prediksi dan rating sebenarnya. Semakin rendah nilai RMSE, semakin baik model dalam memprediksi rating.
+
+* Mean Absolute Error (MAE): Metrik ini juga mengukur perbedaan antara rating prediksi dan rating sebenarnya, tetapi tanpa memperhatikan arah perbedaan. MAE menghitung rata-rata dari selisih absolut antara rating prediksi dan rating sebenarnya. Nilai MAE yang lebih rendah menunjukkan kinerja model yang lebih baik.
+
+* Precision, Recall, dan F1-Score: Precision mengukur sejauh mana produk yang direkomendasikan benar-benar relevan bagi pengguna. Recall mengukur sejauh mana produk yang relevan berhasil ditemukan oleh model. F1-Score adalah ukuran kombinasi dari precision dan recall. Semakin tinggi nilai precision, recall, dan F1-Score, semakin baik kinerja model dalam memberikan rekomendasi yang relevan.
+
+Hasil evaluasi yang diperoleh adalah sebagai berikut:
+
+Tabel 1. Hasil evaluasi model SVD pada data uji (full trainset)
+
+| Metrics  | Tanpa Hyperparameter Tuning | Dengan Hyperparameter Tuning |
+| --------- | --------- | --------- |
+| RSME (Root Mean Squared Error)  | 0.7998  | **0.3348** |
+| MAE (Mean Avsolute Error)  | 0.6083  | **0.2539** |
+| Precision | 0.9194 | **0.9946** |
+| Recall | **0.9983** | 0.9978 |
+| F1-score | 0.9572 | **0.9962** |
+
+Hasil evaluasi menggunakan model SVD pada data uji (dengan full trainset) menunjukkan bahwa penggunaan hyperparameter tuning memiliki dampak positif terhadap kualitas prediksi. Model dengan hyperparameter tuning menghasilkan nilai RMSE dan MAE yang lebih rendah, menandakan kemampuan yang lebih baik dalam memperkirakan rating yang sebenarnya. Selain itu, terdapat peningkatan yang signifikan dalam presisi, recall, dan F1-score, yang mengindikasikan kemampuan yang lebih baik dalam mengklasifikasikan ulasan dan memberikan rekomendasi produk yang lebih relevan. Oleh karena itu, penerapan hyperparameter tuning pada model SVD dapat meningkatkan akurasi dan kualitas sistem rekomendasi produk, yang berpotensi meningkatkan kepuasan pelanggan dan penjualan.
 
 # Kesimpulan
 
