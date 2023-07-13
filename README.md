@@ -107,16 +107,24 @@ Tabel 2. Dataframe review
 
 # Data Preparation
 ## Data Cleaning
-Pada proses preprocessing/cleaning, Hanya kolom-kolom yang relevan untuk analisis lebih lanjut yang dipilih. Kolom-kolom yang dipilih pada file product_info.csv adalah product_id, product_name, brand_name, ingredients, primary_category, dan tertiary_category. Hal ini karena pada sistem rekomendasi yang akan dikembangkan untuk content-based filtering menggunakan data produk ini akan menggunakan informasi ingredient, kategori utama dan kategori tertier untuk atribut sistem rekomendasinya. Setelah memilih kolom-kolom yang relevan, dilakukan penanganan terhadap data yang memiliki nilai null. Selanjutnya, dilakukan penanganan terhadap data yang terduplikat. Dari hasil perhitungan tersebut, tidak ditemukan adanya data yang terduplikat dalam dataframe produk. Terakhir, dilakukan penghapusan baris yang memiliki nilai null dalam dataframe produk. Dengan melakukan penghapusan tersebut, dataframe yang digunakan dalam analisis lebih lanjut tidak memiliki nilai null dan untuk memastikan kualitas data yang baik.
 
-**Hasil data cleaning:**
+Pada proses preprocessing/cleaning, beberapa langkah telah dilakukan. Pertama, dipilih kolom-kolom yang relevan sesuai kebutuhan sistem rekomendasi yang akan dikembangkan. Pada file product_info.csv (dataframe produk), kolom yang dipilih antara lain product_id, product_name, brand_name, ingredients, primary_category, dan tertiary_category. Pemilihan kolom ini didasarkan pada kebutuhan model content-based filtering yang akan dikembangkan. Kolom-kolom tersebut penting untuk memberikan rekomendasi produk yang mirip dan sesuai dengan preferensi pengguna, dengan mempertimbangkan informasi mengenai bahan-bahan produk, kategori utama, dan kategori tertier. Selanjutnya, dilakukan penanganan terhadap data yang memiliki nilai null/missing value. Data dengan nilai null dihapus untuk memastikan data yang digunakan tidak memiliki nilai null yang dapat mempengaruhi model. Langkah selanjutnya adalah menangani data yang terduplikat. Dilakukan pengecekan terhadap adanya baris data yang memiliki nilai yang sama pada seluruh kolom. Jika terdapat duplikasi, baris data tersebut dihapus untuk menjaga kebersihan data dan mencegah bias yang tidak diinginkan. Contoh dataframe produk yang telah dibersihkan dapat dilihat pada Tabel 3.
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/product_data.png)
-Gambar 1. Dataframe Produk
+Tabel 3. Dataframe produk
+| product_id | product_name               | brand_name | ingredients                                         | primary_category | tertiary_category |
+|------------|----------------------------|------------|-----------------------------------------------------|------------------|-------------------|
+| P473671    | Fragrance Discovery Set    | 19-69      | ['Capri Eau de Parfum:', 'Alcohol Denat. (SD A...   | Fragrance        | Perfume Gift Sets |
+| P473668    | La Habana Eau de Parfum    | 19-69      | ['Alcohol Denat. (SD Alcohol 39C), Parfum (Fra...   | Fragrance        | Perfume           |
+| P473662    | Rainbow Bar Eau de Parfum  | 19-69      | ['Alcohol Denat. (SD Alcohol 39C), Parfum (Fra...   | Fragrance        | Perfume           |
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/review_data.png)
+Untuk file reviews_1500_end.csv (dataframe review), juga dilakukan proses preprocessing/cleaning yang sama. Pada file ini, kolom-kolom yang digunakan adalah author_id, product_id, dan rating. Pemilihan kolom-kolom ini didasarkan pada pengembangan model collaborative filtering yang memanfaatkan data rating produk dari pengguna atau penulis ulasan. Kolom author_id digunakan untuk mengidentifikasi secara unik penulis ulasan, sementara kolom product_id digunakan untuk mengidentifikasi produk yang diberi ulasan. Rating merupakan nilai penilaian yang diberikan oleh penulis ulasan terhadap produk tersebut. Dengan menggunakan kolom-kolom ini, dapat diidentifikasi pola kesamaan antara pengguna berdasarkan preferensi produk yang mereka berikan. Proses preprocessing/cleaning yang dilakukan pada file reviews_1500_end.csv mirip dengan langkah-langkah pada file product_info.csv. Data dengan nilai null dan duplikat dihapus untuk menjaga kualitas dan kebersihan data. Contoh dataframe review yang telah dibersihkan dapat dilihat pada Tabel 4.
 
-Gambar 2. Dataframe Review
+Tabel 4. Dataframe Review
+| author_id    | product_id | rating |
+|--------------|------------|--------|
+| 1945004256   | P379064    | 5      |
+| 5478482359   | P379064    | 3      |
+| 29002209922  | P379064    | 5      |
 
 ## Exploratory Data Analysis
 Pada file "product_info.csv", dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Pada tahap ini dapat dilihat Distribusi produk per kategori utama, top-10 brand, top-10 ingredient semua product.
