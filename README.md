@@ -262,6 +262,12 @@ Perhitungan presisi dilakukan menggunakan formula berikut:
 
 Precision = (# of our recommendations that are relevant) / (# of items we recommended)
 
+Berdasarkan contoh penggunaan [(example usage)](#content-based-filtering):
+Precision = rekomendasi relevan (fragrance & Perfume Gift Sets)/banyak rekomendasi
+          = 10/10
+          = 1
+Jadi presisinya = 100%
+
 Dalam konteks ini, precision mengukur persentase rekomendasi yang relevan dengan preferensi pengguna terhadap kategori dan subkategori produk yang sama. Dalam kasus ini, semua rekomendasi yang diberikan oleh model memiliki kategori dan subkategori yang sama dengan contoh penggunaan (example usage), sehingga presisinya adalah 100%. Hal ini menunjukkan bahwa model memberikan rekomendasi yang tepat dan relevan dengan preferensi pengguna.
 
 ## Collaborative Filtering
