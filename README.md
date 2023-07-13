@@ -256,13 +256,13 @@ Tabel 9. Top-10 Recommendation: Collaborative Filtering
 
 # Evaluation
 ## Content-Based Filtering
-Model content-based filtering yang dikembangkan berhasil memberikan rekomendasi produk yang sangat relevan dengan preferensi pengguna berdasarkan kategori dan subkategori yang diinginkan. Dengan precision sebesar 100%, model ini mampu memberikan rekomendasi produk yang sesuai dan dapat diandalkan.
+Model content-based filtering yang dikembangkan berhasil memberikan rekomendasi produk yang sangat relevan dengan preferensi pengguna berdasarkan kategori dan subkategori yang diinginkan. Dengan presisi sebesar 100%, model ini mampu memberikan rekomendasi produk yang sesuai dan dapat diandalkan.
 
 Perhitungan presisi dilakukan menggunakan formula berikut:
 
 Precision = (# of our recommendations that are relevant) / (# of items we recommended)
 
-Dalam konteks ini, precision mengukur persentase rekomendasi yang relevan dengan preferensi pengguna terhadap kategori dan subkategori produk yang sama. Dalam kasus ini, semua rekomendasi yang diberikan oleh model memiliki kategori dan subkategori yang sama dengan contoh penggunaan (example usage), sehingga precisionnya adalah 100%. Hal ini menunjukkan bahwa model memberikan rekomendasi yang tepat dan relevan dengan preferensi pengguna.
+Dalam konteks ini, precision mengukur persentase rekomendasi yang relevan dengan preferensi pengguna terhadap kategori dan subkategori produk yang sama. Dalam kasus ini, semua rekomendasi yang diberikan oleh model memiliki kategori dan subkategori yang sama dengan contoh penggunaan (example usage), sehingga presisinya adalah 100%. Hal ini menunjukkan bahwa model memberikan rekomendasi yang tepat dan relevan dengan preferensi pengguna.
 
 ## Collaborative Filtering
 Evaluasi model collaborative filtering dilakukan untuk mengukur kinerja dan akurasi model dalam memberikan rekomendasi produk kepada pengguna. Terdapat beberapa metrik evaluasi yang umum digunakan:
@@ -285,7 +285,11 @@ Tabel 10. Hasil evaluasi model SVD pada data uji (full trainset)
 | Recall                       | **0.9983**                  | 0.9978                      |
 | F1-score                     | 0.9572                      | **0.9962**                  |
 
-Hasil evaluasi menggunakan model SVD pada data uji (dengan full trainset) menunjukkan bahwa penggunaan hyperparameter tuning memiliki dampak positif terhadap kualitas prediksi. Model dengan hyperparameter tuning menghasilkan nilai RMSE dan MAE yang lebih rendah, menandakan kemampuan yang lebih baik dalam memperkirakan rating yang sebenarnya. Selain itu, terdapat peningkatan yang signifikan dalam presisi, recall, dan F1-score, yang mengindikasikan kemampuan yang lebih baik dalam mengklasifikasikan ulasan dan memberikan rekomendasi produk yang lebih relevan. Oleh karena itu, penerapan hyperparameter tuning pada model SVD dapat meningkatkan akurasi dan kualitas sistem rekomendasi produk, yang berpotensi meningkatkan kepuasan pelanggan dan penjualan.
+Hasil evaluasi menggunakan model SVD pada data uji (dengan ,enggunakan full trainset) menunjukkan bahwa penggunaan hyperparameter tuning memiliki dampak positif terhadap kualitas prediksi. Model dengan hyperparameter tuning menghasilkan nilai RMSE dan MAE yang lebih rendah, menandakan kemampuan yang lebih baik dalam memperkirakan rating yang sebenarnya. Selain itu, terdapat peningkatan yang signifikan dalam presisi, recall, dan F1-score, yang meunjukkan kemampuan yang lebih baik dalam mengklasifikasikan ulasan dan memberikan rekomendasi produk yang lebih relevan. Oleh karena itu, penerapan hyperparameter tuning pada model SVD dapat meningkatkan akurasi dan kualitas sistem rekomendasi produk, yang berpotensi meningkatkan kepuasan pelanggan dan penjualan.
+
+Dengan demikian, hasil evaluasi menunjukkan bahwa penerapan hyperparameter tuning pada model collaborative filtering memiliki dampak positif terhadap kualitas sistem rekomendasi. Dengan nilai presisi yang tinggi, sistem mampu memberikan rekomendasi produk yang relevan bagi pengguna. Selain itu, peningkatan presisi, recall, dan F1-score juga menunjukkan bahwa model dapat dengan akurat mengklasifikasikan rating dan menghasilkan rekomendasi yang sesuai.
+
+Hasil evaluasi kedua model ini memiliki implikasi yang signifikan terhadap kualitas sistem rekomendasi. Dengan akurasi yang lebih tinggi, sistem dapat memberikan rekomendasi produk yang lebih relevan dan sesuai dengan preferensi pengguna. Hal ini dapat meningkatkan kepuasan pengguna, meningkatkan retensi pelanggan, dan berpotensi meningkatkan penjualan produk.
 
 # Kesimpulan
 Dalam proyek pengembangan sistem rekomendasi produk untuk toko online Sephora, telah diimplementasikan dua pendekatan: content-based filtering dan collaborative filtering. Pendekatan content-based filtering menggunakan TF-IDF Vectorizer untuk mengekstraksi fitur-fitur produk dan menghitung kemiripan antara produk menggunakan metode cosine similarity. Pendekatan collaborative filtering menggunakan metode Singular Value Decomposition (SVD) untuk menganalisis perilaku rating pengguna.
