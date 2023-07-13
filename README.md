@@ -161,7 +161,7 @@ Model TF-IDF adalah sebuah metode analisis yang mengevaluasi seberapa relevan su
 
 **Similarity Calculation:**
 
-Selanjutnya, dilakukan perhitungan kemiripan menggunakan metode cosine similarity. Metode ini digunakan untuk mengukur sejauh mana dua vektor fitur tersebut mirip satu sama lain. Hasilnya adalah matriks kemiripan yang menunjukkan tingkat kemiripan antara setiap pasang produk dalam dataset.
+Selanjutnya, dilakukan perhitungan kemiripan menggunakan metode cosine similarity. Metode ini digunakan untuk mengukur sejauh mana dua vektor fitur tersebut mirip satu sama lain. Hasilnya adalah matriks kemiripan yang menunjukkan tingkat kemiripan antara setiap pasang produk dalam dataset. Hasil dari matrix similarity menggunakan cosine similarity dapat dilihat pada Tabel 5.
 
 Cosine similarity adalah metode untuk mengukur tingkat kesamaan antara dua vektor. Dalam konteks dokumen, cosine similarity digunakan untuk membandingkan kesamaan antara dua dokumen berdasarkan representasi vektor dari dokumen-dokumen tersebut [[2]](#daftar-pustaka).
 
@@ -176,16 +176,42 @@ Di mana:
 
 Perhitungan cosine similarity melibatkan perkalian dan penjumlahan elemen-elemen vektor, yang kemudian dibagi dengan perkalian magnitudo masing-masing vektor. Hasil perhitungan cosine similarity berada dalam rentang -1 hingga 1. Nilai yang mendekati 1 menunjukkan tingkat kesamaan yang tinggi antara dua vektor, sementara nilai yang mendekati -1 menunjukkan perbedaan yang besar. Nilai yang mendekati 0 menunjukkan bahwa dua vektor tidak memiliki kesamaan yang signifikan.
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/cosine%20similarity.png)
-
-Gambar 6. Hasil matrix similarity menggunakan cosine similarity
+Tabel 5. Hasil matrix similarity menggunakan cosine similarity
+| product_id | P500606 | P483662 | P430910 | P501687 | P442734 |
+|------------|---------|---------|---------|---------|---------|
+| P469102    | 0.006751| 0.000000| 0.030293| 0.039041| 0.015038|
+| P397665    | 0.031275| 0.040026| 0.010865| 0.005701| 0.034023|
+| P481377    | 0.007799| 0.007605| 0.334685| 0.340024| 0.006125|
+| P461600    | 0.506776| 0.466299| 0.005326| 0.005960| 0.031491|
+| P422905    | 0.016008| 0.011395| 0.017614| 0.018594| 0.379430|
+| P482263    | 0.444789| 0.410472| 0.002666| 0.000000| 0.017110|
+| P479734    | 0.017136| 0.050994| 0.017292| 0.011651| 0.365741|
+| P457828    | 0.463426| 0.458255| 0.000568| 0.000000| 0.114641|
+| P474824    | 0.017567| 0.010696| 0.019336| 0.013645| 0.710104|
+| P17876556  | 0.351651| 0.341904| 0.006136| 0.008798| 0.030991|
 
 **Top-10 Recommmendation (Example Usage):**
 
 Kemudian dibuat fungsi untuk menghasilkan rekomendasi produk berdasarkan produk yang diberikan dengan menghitung kemiripan antara produk yang diberikan dengan produk lain dalam dataset, dan mengambil produk dengan kemiripan tertinggi sebagai rekomendasi. Berikut contoh hasil top-10 rekomendasi produk berdasarkan produk dengan ID tertentu.
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/Top-10%20content-based%20filtering.png)
-Gambar 7. Top-10 Recommendation: Content-Based Filtering
+Tabel 6. Informasi produk (example usage)
+| product_name            | brand_name   | primary_category   | tertiary_category   |
+|-------------------------|--------------|--------------------|---------------------|
+| Fragrance Discovery Set | 19-69        | Fragrance          | Perfume Gift Sets  |
+
+Tabel 7. Top-10 Recommendation: Content-Based Filtering
+| rank | product_name                                      | brand_name         | primary_category   | tertiary_category   |
+|------|---------------------------------------------------|--------------------|--------------------|---------------------|
+|   1  | Wild Poppy Perfume Set                            | NEST New York      | Fragrance          | Perfume Gift Sets   |
+|   2  | Sunkissed Hibiscus Fine Fragrance Set             | NEST New York      | Fragrance          | Perfume Gift Sets   |
+|   3  | Not a Perfume Sampler Set                         | Juliette Has a Gun | Fragrance          | Perfume Gift Sets   |
+|   4  | Essential Wardrobe Eau de Parfum Set              | Juliette Has a Gun | Fragrance          | Perfume Gift Sets   |
+|   5  | Mini Fragrance Discovery Set                      | HERMÈS             | Fragrance          | Perfume Gift Sets   |
+|   6  | Dylan Blue & Dylan Turquoise Travel Spray Duo Set | Versace            | Fragrance          | Perfume Gift Sets   |
+|   7  | Mini Perfume Set                                  | Versace            | Fragrance          | Perfume Gift Sets   |
+|   8  | Archive Kit Sampler Set                           | Commodity          | Fragrance          | Perfume Gift Sets   |
+|   9  | Fragrance Discovery Set                           | Boy Smells         | Fragrance          | Perfume Gift Sets   |
+|  10  | Mini Good Girl Perfume Set                        | Carolina Herrera   | Fragrance          | Perfume Gift Sets  |
 
 ## Collaborative Filtering
 Collaborative filtering adalah metode dalam sistem rekomendasi yang menggunakan informasi dari pengguna lain untuk memberikan rekomendasi kepada pengguna. Metode ini mengidentifikasi pengguna dengan preferensi atau perilaku serupa, dan menggunakan informasi dari pengguna-pengguna tersebut untuk meramalkan preferensi atau rekomendasi bagi pengguna target [[1]](#daftar-pustaka)[[3]](#daftar-pustaka).
@@ -205,8 +231,28 @@ Hiperparameter terbaik yang ditemukan melalui penyetelan adalah n_factor sebesar
 
 Kemudian dibuat fungsi untuk menghasilkan rekomendasi produk berdasarkan pengguna spesifik dengan memprediksi rating untuk produk-produk yang belum dinilai oleh pengguna tersebut. Prediksi tersebut akan diurutkan secara menurun. Berikut contoh hasil top-10 rekomendasi produk berdasarkan pengguna dengan ID tertentu.
 
-![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/Top-10%20collaborative%20filtering.png)
-Gambar 8. Top-10 Recommendation: Collaborative Filtering
+Tabel 8. Produk yang diberi rating tinggi oleh user 1845533064
+| Product ID | Product Name                                                               | Primary Category   | Rating |
+|------------|----------------------------------------------------------------------------|--------------------|--------|
+| P480608    | Equilibrium Instant Plumping Eye Mask                                      | Skincare           | 4      |
+| P504277    | Face Stone Nourishing Solid Refillable Facial Oil with Tamanu + Blue Tansy | Skincare           | 4      |
+| P504506    | The Silk Serum Wrinkle-Smoothing Retinol Alternative                       | Skincare           | 5      |
+| P502741    | SuperSolutions 10% Azelaic Serum Redness Relief Solution                   | Skincare           | 5      |
+| P483701    | Daily Essentials Travel Set                                                | Skincare           | 5      |
+
+Tabel 9. Top-10 Recommendation: Collaborative Filtering
+| Rank | Product ID | Product Name                                                                             | Primary Category   |
+|------|------------|------------------------------------------------------------------------------------------|--------------------|
+| 1    | P500983    | Anytime, Anyface Lactic Acid Serum + Protini Moisturizer Duo                             | Skincare           |
+| 2    | P505338    | Pore Perfecting Liquid Exfoliator with 2% BHA + Borage                                   | Skincare           |
+| 3    | P505316    | Aquarius BHA + Blue Tansy Clarity Cleanser                                               | Skincare           |
+| 4    | P476496    | Instant Reset Brightening Overnight Recovery Gel-Cream with Niacinamide Refill           | Skincare           |
+| 5    | P505133    | High Performance Face Cleanser for Clear Skin with Niacinamide                           | Skincare           |
+| 6    | P474057    | Lip Service - Lip Balm Duo Mint & Shea                                                   | Skincare           |
+| 7    | P467112    | Daily Microfoliant Exfoliator Refill Pack                                                | Skincare           |
+| 8    | P505381    | Multi Action Clear Gentle Daily Brightening & Retexturizing Toner for Acne and Breakouts | Skincare           |
+| 9    | P504049    | Skin Filter Daily Brightening Phyto-Retinol + AHA Serum                                  | Skincare           |
+| 10   | P419466    | Tan Build Up Remover Mitt                                                                | Skincare           |
 
 # Evaluation
 ## Collaborative Filtering
