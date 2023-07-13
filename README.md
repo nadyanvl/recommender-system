@@ -127,7 +127,7 @@ Tabel 4. Dataframe Review
 | 29002209922  | P379064    | 5      |
 
 ## Exploratory Data Analysis
-Pada dataframe produk dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Pada tahap ini dapat dilihat distribusi produk per kategori utama, top-10 brand, top-10 ingredient semua product pada Gambar 3. Temuan yang didapatkan adalah:
+Pada dataframe produk dilakukan eksplorasi terhadap atribut-atribut seperti nama produk, merek produk, harga, bahan-bahan, kategori utama, dan kategori tersier. Pada tahap ini dapat dilihat distribusi produk per kategori utama, top-10 brand, top-10 ingredient semua product pada Gambar 1. Temuan yang didapatkan adalah:
 * Distribusi Produk per Kategori Utama: Produk skincare dan makeup mendominasi jumlah produk yang tersedia di Sephora.
 * Top-10 Brand: Sephora Collection dan Clinique adalah brand yang paling banyak menghadirkan produk dalam dataset.
 * Top-10 Bahan (Ingredient): Glycerin dan phenoxyethanol adalah bahan yang paling sering digunakan dalam produk.
@@ -135,19 +135,19 @@ Pada dataframe produk dilakukan eksplorasi terhadap atribut-atribut seperti nama
 Dengan memanfaatkan temuan-temuan dari EDA, diharapkan model content-based filtering yang dikembangkan mampu memberikan rekomendasi produk yang lebih relevan dan sesuai dengan preferensi pengguna yang didasarkan pada kategori utama, brand, dan bahan yang disukai oleh pengguna.
 
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_product.png)
-Gambar 3. EDA Produk
+Gambar 1. EDA Produk
 
-Pada file "reviews.csv", analisis data eksploratori dilakukan terhadap atribut-atribut seperti ID penulis ulasan, ID produk, dan rating yang diberikan oleh penulis. Pada tahap ini, dapat dilihat distribusi rating, rata-rata rating per product, jumlah rating per product, rata-rata rating pada Gambar 4 dan 5. Temuan yang didapatkan adalah:
+Pada file "reviews.csv", analisis data eksploratori dilakukan terhadap atribut-atribut seperti ID penulis ulasan, ID produk, dan rating yang diberikan oleh penulis. Pada tahap ini, dapat dilihat distribusi rating, rata-rata rating per product, jumlah rating per product, rata-rata rating pada Gambar 2 dan 3. Temuan yang didapatkan adalah:
 * Distribusi rating: lebih dari 30.000 pengguna memberikan rating 5 untuk produk. Hal ini menunjukkan bahwa banyak pengguna memberikan rating tinggi (5) untuk produk yang ada dalam dataset.
 * Rata-rata rating per product: rata-rata produk memiliki rating yang bagus. Meskipun ada produk dengan rating yang rendah, secara umum, rata-rata rating produk cenderung tinggi. Ini menunjukkan bahwa sebagian besar produk dalam dataset memiliki rating yang baik.
 
 Dengan memanfaatkan temuan-temuan dari EDA, diharapkan model collaborative filtering yang dikembangkan mampu memberikan rekomendasi produk yang lebih relevan dan sesuai dengan preferensi pengguna berdasarkan rating yang diberikan oleh pengguna lain terhadap produk.
 
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_1.png)
-Gambar 4. EDA Review part 1
+Gambar 2. EDA Review part 1
 
 ![image](https://raw.githubusercontent.com/nadyanvl/recommender-system/main/assets/EDA_rating_2.png)
-Gambar 5. EDA Review part 2
+Gambar 3. EDA Review part 2
 
 # Modeling and Results
 ## Content-Based Filtering
