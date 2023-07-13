@@ -255,6 +255,15 @@ Tabel 9. Top-10 Recommendation: Collaborative Filtering
 | 10   | P419466    | Tan Build Up Remover Mitt                                                                | Skincare           |
 
 # Evaluation
+## Content-Based Filtering
+Model content-based filtering yang dikembangkan berhasil memberikan rekomendasi produk yang sangat relevan dengan preferensi pengguna berdasarkan kategori dan subkategori yang diinginkan. Dengan precision sebesar 100%, model ini mampu memberikan rekomendasi produk yang sesuai dan dapat diandalkan.
+
+Perhitungan presisi dilakukan menggunakan formula berikut:
+
+Precision = (# of our recommendations that are relevant) / (# of items we recommended)
+
+Dalam konteks ini, precision mengukur persentase rekomendasi yang relevan dengan preferensi pengguna terhadap kategori dan subkategori produk yang sama. Dalam kasus ini, semua rekomendasi yang diberikan oleh model memiliki kategori dan subkategori yang sama dengan contoh penggunaan (example usage), sehingga precisionnya adalah 100%. Hal ini menunjukkan bahwa model memberikan rekomendasi yang tepat dan relevan dengan preferensi pengguna.
+
 ## Collaborative Filtering
 Evaluasi model collaborative filtering dilakukan untuk mengukur kinerja dan akurasi model dalam memberikan rekomendasi produk kepada pengguna. Terdapat beberapa metrik evaluasi yang umum digunakan:
 
