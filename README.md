@@ -167,7 +167,7 @@ Cosine similarity adalah metode untuk mengukur tingkat kesamaan antara dua vekto
 
 Rumus perhitungan cosine similarity:
 
-cosine similarity (x, y) = Σ(xi * yi) / (√(Σ(xi^2)) * √(Σ(yi^2)))
+*`cosine similarity (x, y) = Σ(xi * yi) / (√(Σ(xi^2)) * √(Σ(yi^2)))`*
 
 Di mana:
 - x dan y adalah dua vektor yang akan dibandingkan.
@@ -260,17 +260,15 @@ Model content-based filtering yang dikembangkan berhasil memberikan rekomendasi 
 
 Perhitungan presisi dilakukan menggunakan formula berikut:
 
-Precision = (# of our recommendations that are relevant) / (# of items we recommended)
+*`Precision = (# of our recommendations that are relevant) / (# of items we recommended)`*
 
 Berdasarkan contoh penggunaan [(example usage)](#content-based-filtering):
 
-Precision = rekomendasi relevan (fragrance & Perfume Gift Sets)/banyak rekomendasi
+*`Precision = rekomendasi relevan (fragrance & Perfume Gift Sets) / banyak rekomendasi`*
 
-          = 10/10
+*`Precision = 10 / 10 = 1`*
           
-          = 1
-          
-Jadi presisinya = 100%
+*`Jadi presisinya = 100%`*
 
 Dalam konteks ini, precision mengukur persentase rekomendasi yang relevan dengan preferensi pengguna terhadap kategori dan subkategori produk yang sama. Dalam kasus ini, semua rekomendasi yang diberikan oleh model memiliki kategori dan subkategori yang sama dengan contoh penggunaan (example usage), sehingga presisinya adalah 100%. Hal ini menunjukkan bahwa model memberikan rekomendasi yang tepat dan relevan dengan preferensi pengguna.
 
@@ -283,7 +281,7 @@ Evaluasi model collaborative filtering dilakukan untuk mengukur kinerja dan akur
 
 * Precision, Recall, dan F1-Score: Precision mengukur sejauh mana produk yang direkomendasikan benar-benar relevan bagi pengguna. Recall mengukur sejauh mana produk yang relevan berhasil ditemukan oleh model. F1-Score adalah ukuran kombinasi dari precision dan recall. Semakin tinggi nilai precision, recall, dan F1-Score, semakin baik kinerja model dalam memberikan rekomendasi yang relevan.
 
-Hasil evaluasi yang diperoleh adalah sebagai berikut:
+**Hasil evaluasi yang diperoleh adalah sebagai berikut:**
 
 Tabel 10. Hasil evaluasi model SVD pada data uji (full trainset)
 
