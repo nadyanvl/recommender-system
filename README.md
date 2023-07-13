@@ -266,15 +266,15 @@ Evaluasi model collaborative filtering dilakukan untuk mengukur kinerja dan akur
 
 Hasil evaluasi yang diperoleh adalah sebagai berikut:
 
-Tabel 1. Hasil evaluasi model SVD pada data uji (full trainset)
+Tabel 10. Hasil evaluasi model SVD pada data uji (full trainset)
 
-| Metrics  | Tanpa Hyperparameter Tuning | Dengan Hyperparameter Tuning |
-| --------- | --------- | --------- |
-| RSME (Root Mean Squared Error)  | 0.7998  | **0.3348** |
-| MAE (Mean Avsolute Error)  | 0.6083  | **0.2539** |
-| Precision | 0.9194 | **0.9946** |
-| Recall | **0.9983** | 0.9978 |
-| F1-score | 0.9572 | **0.9962** |
+| Metrics                      | Tanpa Hyperparameter Tuning | Dengan Hyperparameter Tuning |
+|------------------------------|-----------------------------|-----------------------------|
+| RSME (Root Mean Squared Error)| 0.7998                      | **0.3348**                  |
+| MAE (Mean Absolute Error)    | 0.6083                      | **0.2539**                  |
+| Precision                    | 0.9194                      | **0.9946**                  |
+| Recall                       | **0.9983**                  | 0.9978                      |
+| F1-score                     | 0.9572                      | **0.9962**                  |
 
 Hasil evaluasi menggunakan model SVD pada data uji (dengan full trainset) menunjukkan bahwa penggunaan hyperparameter tuning memiliki dampak positif terhadap kualitas prediksi. Model dengan hyperparameter tuning menghasilkan nilai RMSE dan MAE yang lebih rendah, menandakan kemampuan yang lebih baik dalam memperkirakan rating yang sebenarnya. Selain itu, terdapat peningkatan yang signifikan dalam presisi, recall, dan F1-score, yang mengindikasikan kemampuan yang lebih baik dalam mengklasifikasikan ulasan dan memberikan rekomendasi produk yang lebih relevan. Oleh karena itu, penerapan hyperparameter tuning pada model SVD dapat meningkatkan akurasi dan kualitas sistem rekomendasi produk, yang berpotensi meningkatkan kepuasan pelanggan dan penjualan.
 
